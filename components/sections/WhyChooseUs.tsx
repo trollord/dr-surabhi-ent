@@ -41,18 +41,18 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-[#1a2a45]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-12">
-          <p className="text-sm font-semibold uppercase tracking-widest text-[#0ea5e9] mb-2">
+          <p className="text-sm font-semibold uppercase tracking-widest text-[#C9A96E] mb-2">
             Why Patients Choose Dr. Surabhi
           </p>
           <div className="section-divider mx-auto" />
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#1e293b] mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#FAFAFA] mb-4">
             Care You Can Trust
           </h2>
-          <p className="text-[#64748b] max-w-2xl mx-auto">
+          <p className="text-[#94a3b8] max-w-2xl mx-auto">
             Dr. Surabhi&apos;s practice is built on strong ethical values, advanced clinical
             expertise, and a genuine commitment to every patient&apos;s well-being.
           </p>
@@ -62,16 +62,16 @@ export default function WhyChooseUs() {
           {reasons.map(({ icon: Icon, title, description }) => (
             <article
               key={title}
-              className="bg-white border border-[#e2e8f0] rounded-xl shadow-sm card-hover p-6 group"
+              className="bg-[#1a2a45] border border-[#243355] rounded-xl shadow-sm card-hover p-6 group"
             >
-              <div className="w-12 h-12 rounded-xl bg-[#f0f7ff] flex items-center justify-center mb-4 group-hover:bg-[#0c4a6e] transition-colors">
+              <div className="w-12 h-12 rounded-xl bg-[#0f1a2e] flex items-center justify-center mb-4 group-hover:bg-[#0f1a2e] transition-colors">
                 <Icon
                   size={22}
-                  className="text-[#0c4a6e] group-hover:text-white transition-colors"
+                  className="text-[#C9A96E] group-hover:text-white transition-colors"
                 />
               </div>
-              <h3 className="font-serif text-lg font-bold text-[#1e293b] mb-2">{title}</h3>
-              <p className="text-sm text-[#64748b] leading-relaxed">{description}</p>
+              <h3 className="font-serif text-lg font-bold text-[#FAFAFA] mb-2">{title}</h3>
+              <p className="text-sm text-[#94a3b8] leading-relaxed">{description}</p>
             </article>
           ))}
         </div>

@@ -50,10 +50,10 @@ function Counter({ end, suffix, duration = 1800 }: { end: number; suffix: string
 
 export default function Stats() {
   return (
-    <section className="py-20 bg-[#0c4a6e]">
+    <section className="py-20 bg-[#0f1a2e]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <p className="text-sm font-semibold uppercase tracking-widest text-[#7dd3fc] mb-2">
+          <p className="text-sm font-semibold uppercase tracking-widest text-[#C9A96E] mb-2">
             By the Numbers
           </p>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
@@ -65,8 +65,8 @@ export default function Stats() {
           {statsData.map((stat) => (
             <div key={stat.label} className="text-center">
               <Counter end={stat.end} suffix={stat.suffix} />
-              <div className="mt-2 text-base font-semibold text-[#bae6fd]">{stat.label}</div>
-              <div className="text-xs text-[#7dd3fc] mt-0.5">{stat.sublabel}</div>
+              <div className="mt-2 text-base font-semibold text-[#94a3b8]">{stat.label}</div>
+              <div className="text-xs text-[#C9A96E] mt-0.5">{stat.sublabel}</div>
             </div>
           ))}
         </div>

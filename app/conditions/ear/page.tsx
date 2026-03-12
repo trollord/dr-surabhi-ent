@@ -74,11 +74,11 @@ const faqs = [
 
 export default function EarPage() {
   return (
-    <main className="min-h-screen bg-[#f8fafb]">
+    <main className="min-h-screen bg-[#0f1a2e]">
       {/* Hero */}
-      <section className="pt-24 pb-16 bg-[#0c4a6e] text-white">
+      <section className="pt-24 pb-16 bg-[#C9A96E] text-[#0f1a2e]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="text-sm text-[#7dd3fc] mb-6">
+          <nav className="text-sm text-[#C9A96E] mb-6">
             <Link href="/conditions" className="hover:text-white">Conditions</Link>
             <span className="mx-2">/</span>
             <span className="text-white">Ear &amp; Hearing</span>
@@ -87,7 +87,7 @@ export default function EarPage() {
           <h1 className="font-serif text-4xl sm:text-5xl font-bold text-white mb-4">
             Ear &amp; Hearing
           </h1>
-          <p className="text-[#bae6fd] text-lg max-w-2xl">
+          <p className="text-[#94a3b8] text-lg max-w-2xl">
             Comprehensive diagnosis and treatment of ear conditions. From common infections to
             hearing loss, vertigo, and eardrum repair — expert care by Dr. Surabhi Nikam Mirajkar.
           </p>
@@ -98,7 +98,7 @@ export default function EarPage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="font-serif text-3xl font-bold text-[#1e293b]">
+            <h2 className="font-serif text-3xl font-bold text-[#FAFAFA]">
               Ear Conditions We Treat
             </h2>
           </div>
@@ -106,28 +106,28 @@ export default function EarPage() {
             {conditions.map((c) => (
               <article
                 key={c.name}
-                className="bg-white border border-[#e2e8f0] rounded-xl shadow-sm p-6 card-hover"
+                className="bg-[#1a2a45] border border-[#243355] rounded-xl shadow-sm p-6 card-hover"
               >
-                <h3 className="font-serif text-xl font-bold text-[#1e293b] mb-2">{c.name}</h3>
-                <p className="text-sm text-[#64748b] leading-relaxed mb-4">{c.description}</p>
+                <h3 className="font-serif text-xl font-bold text-[#FAFAFA] mb-2">{c.name}</h3>
+                <p className="text-sm text-[#94a3b8] leading-relaxed mb-4">{c.description}</p>
                 <div className="mb-4">
-                  <p className="text-xs font-semibold uppercase tracking-widest text-[#0ea5e9] mb-2">
+                  <p className="text-xs font-semibold uppercase tracking-widest text-[#C9A96E] mb-2">
                     Common Symptoms
                   </p>
                   <ul className="space-y-1">
                     {c.symptoms.map((s) => (
-                      <li key={s} className="flex items-start gap-2 text-sm text-[#1e293b]">
-                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#0c4a6e] shrink-0" />
+                      <li key={s} className="flex items-start gap-2 text-sm text-[#FAFAFA]">
+                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#0f1a2e] shrink-0" />
                         {s}
                       </li>
                     ))}
                   </ul>
                 </div>
-                <div className="bg-[#f0f7ff] rounded-lg p-3">
-                  <p className="text-xs font-semibold uppercase tracking-widest text-[#0c4a6e] mb-1">
+                <div className="bg-[#0f1a2e] rounded-lg p-3">
+                  <p className="text-xs font-semibold uppercase tracking-widest text-[#0f1a2e] mb-1">
                     Treatment Approach
                   </p>
-                  <p className="text-sm text-[#1e293b]">{c.treatment}</p>
+                  <p className="text-sm text-[#FAFAFA]">{c.treatment}</p>
                 </div>
               </article>
             ))}
@@ -136,10 +136,10 @@ export default function EarPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-[#1a2a45]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <h2 className="font-serif text-3xl font-bold text-[#1e293b]">
+            <h2 className="font-serif text-3xl font-bold text-[#FAFAFA]">
               Frequently Asked Questions
             </h2>
           </div>
@@ -147,15 +147,15 @@ export default function EarPage() {
             {faqs.map((faq) => (
               <details
                 key={faq.q}
-                className="group bg-white border border-[#e2e8f0] rounded-xl overflow-hidden"
+                className="group bg-[#1a2a45] border border-[#243355] rounded-xl overflow-hidden"
               >
-                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer font-medium text-[#1e293b] hover:text-[#0c4a6e] list-none">
+                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer font-medium text-[#FAFAFA] hover:text-[#C9A96E] list-none">
                   {faq.q}
-                  <span className="ml-4 text-[#0c4a6e] text-xl leading-none group-open:rotate-45 transition-transform inline-block">
+                  <span className="ml-4 text-[#0f1a2e] text-xl leading-none group-open:rotate-45 transition-transform inline-block">
                     +
                   </span>
                 </summary>
-                <div className="px-5 pb-4 text-sm text-[#64748b] leading-relaxed border-t border-[#e2e8f0] pt-3">
+                <div className="px-5 pb-4 text-sm text-[#94a3b8] leading-relaxed border-t border-[#243355] pt-3">
                   {faq.a}
                 </div>
               </details>
@@ -165,15 +165,15 @@ export default function EarPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-[#0c4a6e] text-white text-center">
+      <section className="py-16 bg-[#C9A96E] text-[#0f1a2e] text-center">
         <div className="max-w-xl mx-auto px-4">
           <h2 className="font-serif text-2xl font-bold mb-3">Have an Ear Concern?</h2>
-          <p className="text-[#bae6fd] mb-6">
+          <p className="text-[#94a3b8] mb-6">
             Book a consultation with Dr. Surabhi for an expert evaluation.
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center px-7 py-3 rounded-full bg-[#0c9b85] text-white font-semibold hover:bg-[#14b8a6] transition-colors"
+            className="inline-flex items-center px-7 py-3 rounded-full bg-[#C9A96E] text-white font-semibold hover:bg-[#D4B483] transition-colors"
           >
             Book Consultation
           </Link>

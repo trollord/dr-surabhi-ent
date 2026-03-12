@@ -5,17 +5,17 @@ export default function ContactCTA() {
   const whatsappMsg = encodeURIComponent("Hi Dr. Surabhi, I'd like to book a consultation.");
 
   return (
-    <section className="py-20 bg-[#0c4a6e]">
+    <section className="py-20 bg-[#0f1a2e]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main CTA */}
         <div className="text-center mb-14">
-          <p className="text-sm font-semibold uppercase tracking-widest text-[#7dd3fc] mb-2">
+          <p className="text-sm font-semibold uppercase tracking-widest text-[#C9A96E] mb-2">
             Take the First Step
           </p>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
             Ready to Feel Better?
           </h2>
-          <p className="text-[#bae6fd] max-w-xl mx-auto mb-8">
+          <p className="text-[#94a3b8] max-w-xl mx-auto mb-8">
             Book a consultation with Dr. Surabhi Nikam Mirajkar and experience ethical,
             patient-centered ENT and allergy care in Mumbai.
           </p>
@@ -23,7 +23,7 @@ export default function ContactCTA() {
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
               href="/contact"
-              className="inline-flex items-center px-8 py-3.5 rounded-full bg-[#0c9b85] text-white font-semibold text-base hover:bg-[#14b8a6] transition-colors shadow-lg"
+              className="inline-flex items-center px-8 py-3.5 rounded-full bg-[#C9A96E] text-white font-semibold text-base hover:bg-[#D4B483] transition-colors shadow-lg"
             >
               Book Consultation
             </Link>
@@ -31,7 +31,7 @@ export default function ContactCTA() {
               href={`https://wa.me/919876543210?text=${whatsappMsg}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full border-2 border-white text-white font-semibold text-base hover:bg-white hover:text-[#0c4a6e] transition-colors"
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full border-2 border-white text-white font-semibold text-base hover:bg-[#1a2a45] hover:text-[#C9A96E] transition-colors"
             >
               {/* WhatsApp icon inline */}
               <svg
@@ -52,36 +52,36 @@ export default function ContactCTA() {
         {/* Info strip */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 border-t border-white/20 pt-10">
           <div className="flex items-start gap-3">
-            <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
-              <Phone size={18} className="text-[#7dd3fc]" />
+            <div className="w-10 h-10 rounded-full bg-[#1a2a45]/10 flex items-center justify-center shrink-0">
+              <Phone size={18} className="text-[#C9A96E]" />
             </div>
             <div>
-              <p className="text-xs text-[#7dd3fc] uppercase font-semibold mb-1">Phone</p>
-              <a href="tel:+919876543210" className="text-white text-sm hover:text-[#7dd3fc] transition-colors">
+              <p className="text-xs text-[#C9A96E] uppercase font-semibold mb-1">Phone</p>
+              <a href="tel:+919876543210" className="text-white text-sm hover:text-[#C9A96E] transition-colors">
                 +91 98765 43210
               </a>
             </div>
           </div>
 
           <div className="flex items-start gap-3">
-            <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
-              <Clock size={18} className="text-[#7dd3fc]" />
+            <div className="w-10 h-10 rounded-full bg-[#1a2a45]/10 flex items-center justify-center shrink-0">
+              <Clock size={18} className="text-[#C9A96E]" />
             </div>
             <div>
-              <p className="text-xs text-[#7dd3fc] uppercase font-semibold mb-1">Clinic Hours</p>
+              <p className="text-xs text-[#C9A96E] uppercase font-semibold mb-1">Clinic Hours</p>
               <p className="text-white text-sm">Mon – Sat: 10 AM – 7 PM</p>
-              <p className="text-[#bae6fd] text-xs">Sunday: By appointment only</p>
+              <p className="text-[#94a3b8] text-xs">Sunday: By appointment only</p>
             </div>
           </div>
 
           <div className="flex items-start gap-3">
-            <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
-              <MapPin size={18} className="text-[#7dd3fc]" />
+            <div className="w-10 h-10 rounded-full bg-[#1a2a45]/10 flex items-center justify-center shrink-0">
+              <MapPin size={18} className="text-[#C9A96E]" />
             </div>
             <div>
-              <p className="text-xs text-[#7dd3fc] uppercase font-semibold mb-1">Location</p>
+              <p className="text-xs text-[#C9A96E] uppercase font-semibold mb-1">Location</p>
               <p className="text-white text-sm">Mumbai, Maharashtra</p>
-              <p className="text-[#bae6fd] text-xs">India — 400 0XX</p>
+              <p className="text-[#94a3b8] text-xs">India — 400 0XX</p>
             </div>
           </div>
         </div>

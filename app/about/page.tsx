@@ -62,17 +62,17 @@ const philosophy = [
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-[#f8fafb]">
+    <main className="min-h-screen bg-[#0f1a2e]">
       {/* Hero */}
-      <section className="pt-24 pb-16 bg-[#0c4a6e] text-white">
+      <section className="pt-24 pb-16 bg-[#C9A96E] text-[#0f1a2e]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-[#7dd3fc] mb-3">
+          <p className="text-sm font-semibold uppercase tracking-widest text-[#C9A96E] mb-3">
             Meet the Doctor
           </p>
           <h1 className="font-serif text-4xl sm:text-5xl font-bold text-white mb-4">
             About Dr. Surabhi Nikam Mirajkar
           </h1>
-          <p className="text-[#bae6fd] text-lg max-w-2xl mx-auto">
+          <p className="text-[#94a3b8] text-lg max-w-2xl mx-auto">
             MBBS &middot; MS (ENT) &middot; Allergy Specialist &middot; Fellowship in Skull Base
             Surgery
           </p>
@@ -80,19 +80,19 @@ export default function AboutPage() {
       </section>
 
       {/* Bio + Image */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-[#1a2a45]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
             {/* Image placeholder + credentials */}
             <div className="flex flex-col items-center gap-6">
-              <div className="w-72 h-80 sm:w-80 sm:h-96 rounded-2xl bg-gradient-to-br from-[#0c4a6e] to-[#0369a1] flex flex-col items-center justify-center shadow-xl">
-                <div className="w-28 h-28 rounded-full bg-white/20 flex items-center justify-center mb-4">
+              <div className="w-72 h-80 sm:w-80 sm:h-96 rounded-2xl bg-gradient-to-br from-[#0f1a2e] to-[#1a2a45] flex flex-col items-center justify-center shadow-xl">
+                <div className="w-28 h-28 rounded-full bg-[#1a2a45]/20 flex items-center justify-center mb-4">
                   <span className="font-serif text-5xl font-bold text-white">S</span>
                 </div>
                 <span className="text-white font-medium text-center px-4 text-sm leading-snug">
                   Dr. Surabhi Nikam Mirajkar
                 </span>
-                <span className="text-[#7dd3fc] text-xs mt-1">ENT &amp; Allergy Specialist, Mumbai</span>
+                <span className="text-[#C9A96E] text-xs mt-1">ENT &amp; Allergy Specialist, Mumbai</span>
               </div>
 
               <div className="w-full max-w-sm space-y-3">
@@ -104,10 +104,10 @@ export default function AboutPage() {
                 ].map(({ icon: Icon, text }) => (
                   <div
                     key={text}
-                    className="flex items-center gap-3 px-4 py-3 rounded-xl bg-[#f0f7ff] border border-[#e2e8f0]"
+                    className="flex items-center gap-3 px-4 py-3 rounded-xl bg-[#0f1a2e] border border-[#243355]"
                   >
-                    <Icon size={18} className="text-[#0c4a6e] shrink-0" />
-                    <span className="text-sm font-medium text-[#1e293b]">{text}</span>
+                    <Icon size={18} className="text-[#C9A96E] shrink-0" />
+                    <span className="text-sm font-medium text-[#FAFAFA]">{text}</span>
                   </div>
                 ))}
               </div>
@@ -115,15 +115,15 @@ export default function AboutPage() {
 
             {/* Full intro text */}
             <div>
-              <p className="text-sm font-semibold uppercase tracking-widest text-[#0ea5e9] mb-2">
+              <p className="text-sm font-semibold uppercase tracking-widest text-[#C9A96E] mb-2">
                 Her Story
               </p>
               <div className="section-divider" />
-              <h2 className="font-serif text-3xl font-bold text-[#1e293b] mb-6">
+              <h2 className="font-serif text-3xl font-bold text-[#FAFAFA] mb-6">
                 Where Expertise Meets Empathy
               </h2>
 
-              <div className="space-y-5 text-[#64748b] leading-relaxed">
+              <div className="space-y-5 text-[#94a3b8] leading-relaxed">
                 <p>
                   Welcome to the practice of Dr. Surabhi Nikam Mirajkar, a dedicated and compassionate
                   ENT specialist committed to delivering ethical, patient-centered care. With
@@ -157,30 +157,30 @@ export default function AboutPage() {
       </section>
 
       {/* Qualifications Timeline */}
-      <section className="py-20 bg-[#f8fafb]">
+      <section className="py-20 bg-[#0f1a2e]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-sm font-semibold uppercase tracking-widest text-[#0ea5e9] mb-2">
+            <p className="text-sm font-semibold uppercase tracking-widest text-[#C9A96E] mb-2">
               Academic Journey
             </p>
             <div className="section-divider mx-auto" />
-            <h2 className="font-serif text-3xl font-bold text-[#1e293b]">
+            <h2 className="font-serif text-3xl font-bold text-[#FAFAFA]">
               Qualifications &amp; Training
             </h2>
           </div>
 
-          <div className="relative pl-8 border-l-2 border-[#e2e8f0] space-y-8">
+          <div className="relative pl-8 border-l-2 border-[#243355] space-y-8">
             {qualifications.map(({ year, degree, detail, icon: Icon }) => (
               <div key={degree} className="relative">
-                <div className="absolute -left-[2.35rem] w-9 h-9 rounded-full bg-[#0c4a6e] flex items-center justify-center">
+                <div className="absolute -left-[2.35rem] w-9 h-9 rounded-full bg-[#0f1a2e] flex items-center justify-center">
                   <Icon size={16} className="text-white" />
                 </div>
-                <div className="bg-white rounded-xl border border-[#e2e8f0] shadow-sm p-5">
-                  <span className="inline-block text-xs font-bold text-[#0ea5e9] uppercase tracking-widest mb-1">
+                <div className="bg-[#1a2a45] rounded-xl border border-[#243355] shadow-sm p-5">
+                  <span className="inline-block text-xs font-bold text-[#C9A96E] uppercase tracking-widest mb-1">
                     {year}
                   </span>
-                  <h3 className="font-serif text-lg font-bold text-[#1e293b] mb-1">{degree}</h3>
-                  <p className="text-sm text-[#64748b]">{detail}</p>
+                  <h3 className="font-serif text-lg font-bold text-[#FAFAFA] mb-1">{degree}</h3>
+                  <p className="text-sm text-[#94a3b8]">{detail}</p>
                 </div>
               </div>
             ))}
@@ -189,27 +189,27 @@ export default function AboutPage() {
       </section>
 
       {/* Philosophy */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-[#1a2a45]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-sm font-semibold uppercase tracking-widest text-[#0ea5e9] mb-2">
+            <p className="text-sm font-semibold uppercase tracking-widest text-[#C9A96E] mb-2">
               Guiding Values
             </p>
             <div className="section-divider mx-auto" />
-            <h2 className="font-serif text-3xl font-bold text-[#1e293b]">Her Philosophy</h2>
+            <h2 className="font-serif text-3xl font-bold text-[#FAFAFA]">Her Philosophy</h2>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {philosophy.map(({ icon: Icon, title, desc }) => (
               <div
                 key={title}
-                className="bg-white border border-[#e2e8f0] rounded-xl shadow-sm card-hover p-6 text-center"
+                className="bg-[#1a2a45] border border-[#243355] rounded-xl shadow-sm card-hover p-6 text-center"
               >
-                <div className="w-12 h-12 rounded-xl bg-[#f0f7ff] flex items-center justify-center mx-auto mb-4">
-                  <Icon size={22} className="text-[#0c4a6e]" />
+                <div className="w-12 h-12 rounded-xl bg-[#0f1a2e] flex items-center justify-center mx-auto mb-4">
+                  <Icon size={22} className="text-[#C9A96E]" />
                 </div>
-                <h3 className="font-serif text-base font-bold text-[#1e293b] mb-2">{title}</h3>
-                <p className="text-xs text-[#64748b] leading-relaxed">{desc}</p>
+                <h3 className="font-serif text-base font-bold text-[#FAFAFA] mb-2">{title}</h3>
+                <p className="text-xs text-[#94a3b8] leading-relaxed">{desc}</p>
               </div>
             ))}
           </div>
@@ -217,17 +217,17 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-[#0c4a6e] text-white text-center">
+      <section className="py-16 bg-[#C9A96E] text-[#0f1a2e] text-center">
         <div className="max-w-2xl mx-auto px-4">
           <h2 className="font-serif text-3xl font-bold mb-4">
             Ready to Experience Ethical ENT Care?
           </h2>
-          <p className="text-[#bae6fd] mb-8">
+          <p className="text-[#94a3b8] mb-8">
             Book a consultation with Dr. Surabhi and take the first step toward better health.
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center px-8 py-3.5 rounded-full bg-[#0c9b85] text-white font-semibold hover:bg-[#14b8a6] transition-colors"
+            className="inline-flex items-center px-8 py-3.5 rounded-full bg-[#C9A96E] text-white font-semibold hover:bg-[#D4B483] transition-colors"
           >
             Book Consultation
           </Link>

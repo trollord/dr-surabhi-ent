@@ -45,7 +45,7 @@ function StarRating({ count }: { count: number }) {
   return (
     <div className="flex gap-0.5" aria-label={`${count} out of 5 stars`}>
       {Array.from({ length: count }).map((_, i) => (
-        <Star key={i} size={14} className="fill-[#f59e0b] text-[#f59e0b]" />
+        <Star key={i} size={14} className="fill-[#D4B483] text-[#D4B483]" />
       ))}
     </div>
   );
@@ -60,36 +60,36 @@ export default function Testimonials() {
   const t = testimonials[current];
 
   return (
-    <section className="py-20 bg-[#f0f7ff]">
+    <section className="py-20 bg-[#0f1a2e]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <p className="text-sm font-semibold uppercase tracking-widest text-[#0ea5e9] mb-2">
+          <p className="text-sm font-semibold uppercase tracking-widest text-[#C9A96E] mb-2">
             Patient Stories
           </p>
           <div className="section-divider mx-auto" />
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#1e293b] mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#FAFAFA] mb-4">
             What Patients Say
           </h2>
-          <p className="text-[#64748b] max-w-xl mx-auto">
+          <p className="text-[#94a3b8] max-w-xl mx-auto">
             Real experiences from patients who trusted Dr. Surabhi with their ENT and allergy care.
           </p>
         </div>
 
         {/* Carousel */}
         <div className="max-w-2xl mx-auto">
-          <div className="bg-white rounded-2xl border border-[#e2e8f0] shadow-sm p-8 text-center min-h-[240px] flex flex-col justify-between">
+          <div className="bg-[#1a2a45] rounded-2xl border border-[#243355] shadow-sm p-8 text-center min-h-[240px] flex flex-col justify-between">
             <div>
               <div className="flex justify-center mb-4">
                 <StarRating count={t.stars} />
               </div>
-              <blockquote className="text-[#1e293b] text-base leading-relaxed italic mb-6">
+              <blockquote className="text-[#FAFAFA] text-base leading-relaxed italic mb-6">
                 &ldquo;{t.quote}&rdquo;
               </blockquote>
             </div>
             <div>
-              <p className="font-semibold text-[#0c4a6e]">{t.name}</p>
-              <p className="text-sm text-[#64748b]">{t.condition}</p>
+              <p className="font-semibold text-[#0f1a2e]">{t.name}</p>
+              <p className="text-sm text-[#94a3b8]">{t.condition}</p>
             </div>
           </div>
 
@@ -98,7 +98,7 @@ export default function Testimonials() {
             <button
               onClick={prev}
               aria-label="Previous testimonial"
-              className="w-10 h-10 rounded-full border border-[#e2e8f0] bg-white flex items-center justify-center hover:bg-[#0c4a6e] hover:text-white hover:border-[#0c4a6e] transition-colors"
+              className="w-10 h-10 rounded-full border border-[#243355] bg-[#1a2a45] flex items-center justify-center hover:bg-[#0f1a2e] hover:text-white hover:border-[#0f1a2e] transition-colors"
             >
               <ChevronLeft size={18} />
             </button>
@@ -110,7 +110,7 @@ export default function Testimonials() {
                   onClick={() => setCurrent(i)}
                   aria-label={`Go to testimonial ${i + 1}`}
                   className={`w-2.5 h-2.5 rounded-full transition-colors ${
-                    i === current ? "bg-[#0c4a6e]" : "bg-[#e2e8f0]"
+                    i === current ? "bg-[#0f1a2e]" : "bg-[#243355]"
                   }`}
                 />
               ))}
@@ -119,7 +119,7 @@ export default function Testimonials() {
             <button
               onClick={next}
               aria-label="Next testimonial"
-              className="w-10 h-10 rounded-full border border-[#e2e8f0] bg-white flex items-center justify-center hover:bg-[#0c4a6e] hover:text-white hover:border-[#0c4a6e] transition-colors"
+              className="w-10 h-10 rounded-full border border-[#243355] bg-[#1a2a45] flex items-center justify-center hover:bg-[#0f1a2e] hover:text-white hover:border-[#0f1a2e] transition-colors"
             >
               <ChevronRight size={18} />
             </button>

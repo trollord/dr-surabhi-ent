@@ -25,12 +25,12 @@ const categories = ["All", "Clinic", "Equipment", "Events"];
 
 export default function GalleryPage() {
   return (
-    <main className="min-h-screen bg-[#f8fafb]">
-      <section className="pt-24 pb-16 bg-[#0c4a6e] text-white">
+    <main className="min-h-screen bg-[#0f1a2e]">
+      <section className="pt-24 pb-16 bg-[#C9A96E] text-[#0f1a2e]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-[#7dd3fc] mb-3">Our Space</p>
+          <p className="text-sm font-semibold uppercase tracking-widest text-[#C9A96E] mb-3">Our Space</p>
           <h1 className="font-serif text-4xl sm:text-5xl font-bold text-white mb-4">Clinic Gallery</h1>
-          <p className="text-[#bae6fd] text-lg max-w-xl mx-auto">
+          <p className="text-[#94a3b8] text-lg max-w-xl mx-auto">
             A glimpse into our state-of-the-art ENT clinic, equipment, and events. A welcoming, comfortable environment built for your care.
           </p>
         </div>
@@ -40,26 +40,26 @@ export default function GalleryPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-3 justify-center mb-10">
             {categories.map((cat) => (
-              <span key={cat} className="px-4 py-2 rounded-full text-sm font-medium bg-white border border-[#e2e8f0] text-[#1e293b] hover:bg-[#0c4a6e] hover:text-white hover:border-[#0c4a6e] transition-colors cursor-pointer">{cat}</span>
+              <span key={cat} className="px-4 py-2 rounded-full text-sm font-medium bg-[#1a2a45] border border-[#243355] text-[#FAFAFA] hover:bg-[#0f1a2e] hover:text-white hover:border-[#0f1a2e] transition-colors cursor-pointer">{cat}</span>
             ))}
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
             {galleryItems.map((item) => (
-              <div key={item.id} className="bg-white border border-[#e2e8f0] rounded-xl shadow-sm card-hover overflow-hidden">
-                <div className="h-40 bg-gradient-to-br from-[#f0f7ff] to-[#e0f2fe] flex items-center justify-center">
+              <div key={item.id} className="bg-[#1a2a45] border border-[#243355] rounded-xl shadow-sm card-hover overflow-hidden">
+                <div className="h-40 bg-gradient-to-br from-[#0f1a2e] to-[#e0f2fe] flex items-center justify-center">
                   <span className="text-5xl">{item.emoji}</span>
                 </div>
                 <div className="p-3">
-                  <span className="text-xs font-semibold text-[#0ea5e9] uppercase tracking-wider">{item.category}</span>
-                  <p className="text-sm font-medium text-[#1e293b] mt-0.5">{item.label}</p>
+                  <span className="text-xs font-semibold text-[#C9A96E] uppercase tracking-wider">{item.category}</span>
+                  <p className="text-sm font-medium text-[#FAFAFA] mt-0.5">{item.label}</p>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="text-center mt-12 p-8 bg-white rounded-2xl border border-[#e2e8f0] shadow-sm">
-            <p className="text-[#64748b] text-sm">
+          <div className="text-center mt-12 p-8 bg-[#1a2a45] rounded-2xl border border-[#243355] shadow-sm">
+            <p className="text-[#94a3b8] text-sm">
               Actual clinic photos coming soon. For a virtual tour or to schedule a visit, please contact us.
             </p>
           </div>

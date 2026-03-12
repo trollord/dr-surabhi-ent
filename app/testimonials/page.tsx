@@ -24,7 +24,7 @@ function StarRating({ count }: { count: number }) {
   return (
     <div className="flex gap-0.5">
       {Array.from({ length: count }).map((_, i) => (
-        <Star key={i} size={14} className="fill-[#f59e0b] text-[#f59e0b]" />
+        <Star key={i} size={14} className="fill-[#D4B483] text-[#D4B483]" />
       ))}
     </div>
   );
@@ -32,12 +32,12 @@ function StarRating({ count }: { count: number }) {
 
 export default function TestimonialsPage() {
   return (
-    <main className="min-h-screen bg-[#f8fafb]">
-      <section className="pt-24 pb-16 bg-[#0c4a6e] text-white">
+    <main className="min-h-screen bg-[#0f1a2e]">
+      <section className="pt-24 pb-16 bg-[#C9A96E] text-[#0f1a2e]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-[#7dd3fc] mb-3">Patient Stories</p>
+          <p className="text-sm font-semibold uppercase tracking-widest text-[#C9A96E] mb-3">Patient Stories</p>
           <h1 className="font-serif text-4xl sm:text-5xl font-bold text-white mb-4">What Patients Say</h1>
-          <p className="text-[#bae6fd] text-lg max-w-xl mx-auto">
+          <p className="text-[#94a3b8] text-lg max-w-xl mx-auto">
             Real experiences from patients who trusted Dr. Surabhi with their ENT, allergy, and skull base surgery care.
           </p>
         </div>
@@ -47,14 +47,14 @@ export default function TestimonialsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {testimonials.map((t) => (
-              <article key={t.name} className="bg-white border border-[#e2e8f0] rounded-xl shadow-sm card-hover p-6 flex flex-col">
+              <article key={t.name} className="bg-[#1a2a45] border border-[#243355] rounded-xl shadow-sm card-hover p-6 flex flex-col">
                 <StarRating count={t.stars} />
-                <blockquote className="text-[#1e293b] text-sm leading-relaxed italic my-4 flex-1">
+                <blockquote className="text-[#FAFAFA] text-sm leading-relaxed italic my-4 flex-1">
                   &ldquo;{t.quote}&rdquo;
                 </blockquote>
-                <div className="border-t border-[#e2e8f0] pt-4">
-                  <p className="font-semibold text-[#0c4a6e]">{t.name}</p>
-                  <p className="text-xs text-[#64748b]">{t.condition}</p>
+                <div className="border-t border-[#243355] pt-4">
+                  <p className="font-semibold text-[#0f1a2e]">{t.name}</p>
+                  <p className="text-xs text-[#94a3b8]">{t.condition}</p>
                 </div>
               </article>
             ))}
