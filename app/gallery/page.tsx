@@ -47,7 +47,7 @@ export default function GalleryPage() {
             ))}
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {galleryItems.map((item) => (
               <div key={item.id} className="bg-[#1a2a45] border border-[#243355] rounded-xl shadow-sm card-hover overflow-hidden">
                 <div className="h-40 bg-gradient-to-br from-[#0f1a2e] to-[#1a2a45] flex items-center justify-center border-b border-[#243355]">

@@ -70,12 +70,12 @@ export default function ConditionsPage() {
       {/* Conditions grid */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {conditions.map((c) => (
               <Link
                 key={c.href}
                 href={c.href}
-                className="group bg-[#1a2a45] border border-[#243355] hover:border-[#C9A96E]/40 rounded-2xl p-8 card-hover block transition-colors"
+                className="group bg-[#1a2a45] border border-[#243355] hover:border-[#C9A96E]/40 rounded-2xl p-5 sm:p-6 lg:p-8 card-hover block transition-colors"
               >
                 <div className="w-14 h-14 rounded-2xl bg-[#C9A96E]/10 border border-[#C9A96E]/20 flex items-center justify-center mb-5">
                   <c.icon size={26} className="text-[#C9A96E]" />

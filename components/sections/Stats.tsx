@@ -37,35 +37,34 @@ function Counter({ end, suffix, duration = 1800 }: { end: number; suffix: string
   }, [end, duration]);
 
   if (end === 0) {
-    return <span ref={ref} className="font-serif text-5xl font-bold text-white">&#10003;</span>;
+    return <span ref={ref} className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white">&#10003;</span>;
   }
 
   return (
-    <span ref={ref} className="font-serif text-5xl font-bold text-white">
-      {count}
-      {suffix}
+    <span ref={ref} className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+      {count}{suffix}
     </span>
   );
 }
 
 export default function Stats() {
   return (
-    <section className="py-20 bg-[#0f1a2e]">
+    <section className="py-16 sm:py-20 bg-[#0f1a2e]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-10 sm:mb-12">
           <p className="text-sm font-semibold uppercase tracking-widest text-[#C9A96E] mb-2">
             By the Numbers
           </p>
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
+          <h2 className="font-serif text-2xl sm:text-3xl sm:text-4xl font-bold text-white">
             Trusted Care, Proven Results
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {statsData.map((stat) => (
-            <div key={stat.label} className="text-center">
+            <div key={stat.label} className="text-center p-4 sm:p-6 bg-[#1a2a45] rounded-xl border border-[#243355]">
               <Counter end={stat.end} suffix={stat.suffix} />
-              <div className="mt-2 text-base font-semibold text-[#94a3b8]">{stat.label}</div>
+              <div className="mt-2 text-sm sm:text-base font-semibold text-[#94a3b8]">{stat.label}</div>
               <div className="text-xs text-[#C9A96E] mt-0.5">{stat.sublabel}</div>
             </div>
           ))}

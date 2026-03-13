@@ -82,10 +82,10 @@ export default function AboutPage() {
       {/* Bio + Image */}
       <section className="py-20 bg-[#1a2a45]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-14 items-start">
             {/* Image placeholder + credentials */}
             <div className="flex flex-col items-center gap-6">
-              <div className="w-72 h-80 sm:w-80 sm:h-96 rounded-2xl bg-gradient-to-br from-[#0f1a2e] to-[#1a2a45] flex flex-col items-center justify-center shadow-xl">
+              <div className="w-full max-w-xs sm:w-72 sm:h-80 md:w-80 md:h-96 rounded-2xl bg-gradient-to-br from-[#0f1a2e] to-[#1a2a45] flex flex-col items-center justify-center shadow-xl py-10 sm:py-0">
                 <div className="w-28 h-28 rounded-full bg-[#1a2a45]/20 flex items-center justify-center mb-4">
                   <span className="font-serif text-5xl font-bold text-white">S</span>
                 </div>
@@ -169,7 +169,7 @@ export default function AboutPage() {
             </h2>
           </div>
 
-          <div className="relative pl-8 border-l-2 border-[#243355] space-y-8">
+          <div className="relative pl-5 sm:pl-8 border-l-2 border-[#243355] space-y-6 sm:space-y-8">
             {qualifications.map(({ year, degree, detail, icon: Icon }) => (
               <div key={degree} className="relative">
                 <div className="absolute -left-[2.35rem] w-9 h-9 rounded-full bg-[#0f1a2e] flex items-center justify-center">
@@ -199,11 +199,11 @@ export default function AboutPage() {
             <h2 className="font-serif text-3xl font-bold text-[#FAFAFA]">Her Philosophy</h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {philosophy.map(({ icon: Icon, title, desc }) => (
               <div
                 key={title}
-                className="bg-[#1a2a45] border border-[#243355] rounded-xl shadow-sm card-hover p-6 text-center"
+                className="bg-[#1a2a45] border border-[#243355] rounded-xl shadow-sm card-hover p-4 sm:p-6 text-center"
               >
                 <div className="w-12 h-12 rounded-xl bg-[#0f1a2e] flex items-center justify-center mx-auto mb-4">
                   <Icon size={22} className="text-[#C9A96E]" />

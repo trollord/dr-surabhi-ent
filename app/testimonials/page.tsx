@@ -45,9 +45,9 @@ export default function TestimonialsPage() {
 
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {testimonials.map((t) => (
-              <article key={t.name} className="bg-[#1a2a45] border border-[#243355] rounded-xl shadow-sm card-hover p-6 flex flex-col">
+              <article key={t.name} className="bg-[#1a2a45] border border-[#243355] rounded-xl shadow-sm card-hover p-4 sm:p-6 flex flex-col">
                 <StarRating count={t.stars} />
                 <blockquote className="text-[#FAFAFA] text-sm leading-relaxed italic my-4 flex-1">
                   &ldquo;{t.quote}&rdquo;

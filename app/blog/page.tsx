@@ -31,10 +31,10 @@ export default function BlogPage() {
       </section>
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {posts.map((post) => (
               <article key={post.slug} className="bg-[#1a2a45] border border-[#243355] rounded-xl shadow-sm card-hover flex flex-col overflow-hidden">
-                <div className="h-44 bg-gradient-to-br from-[#0f1a2e] to-[#1a2a45] flex items-center justify-center border-b border-[#243355]">
+                <div className="h-32 sm:h-40 md:h-44 bg-gradient-to-br from-[#0f1a2e] to-[#1a2a45] flex items-center justify-center border-b border-[#243355]">
                   <div className="w-16 h-16 rounded-2xl bg-[#C9A96E]/10 border border-[#C9A96E]/20 flex items-center justify-center">
                     <post.icon size={30} className="text-[#C9A96E]" />
                   </div>

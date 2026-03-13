@@ -1,8 +1,10 @@
 import Link from "next/link";
+import { Ear, Wind, Mic, Leaf, Brain, Stethoscope } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
-const conditions = [
+const conditions: { icon: LucideIcon; title: string; href: string; description: string; bullets: string[] }[] = [
   {
-    emoji: "👂",
+    icon: Ear,
     title: "Ear & Hearing",
     href: "/conditions/ear",
     description:
@@ -15,7 +17,7 @@ const conditions = [
     ],
   },
   {
-    emoji: "👃",
+    icon: Wind,
     title: "Nose & Sinuses",
     href: "/conditions/nose-sinus",
     description:
@@ -28,7 +30,7 @@ const conditions = [
     ],
   },
   {
-    emoji: "🗣️",
+    icon: Mic,
     title: "Throat & Voice",
     href: "/conditions/throat-voice",
     description:
@@ -41,7 +43,7 @@ const conditions = [
     ],
   },
   {
-    emoji: "🌿",
+    icon: Leaf,
     title: "Allergy & Immunotherapy",
     href: "/conditions/allergy",
     description:
@@ -54,7 +56,7 @@ const conditions = [
     ],
   },
   {
-    emoji: "🧠",
+    icon: Brain,
     title: "Skull Base Surgery",
     href: "/conditions/skull-base-surgery",
     description:
@@ -92,9 +94,11 @@ export default function ConditionsGrid() {
           {conditions.map((condition) => (
             <article
               key={condition.href}
-              className="bg-[#1a2a45] border border-[#243355] rounded-xl shadow-sm card-hover flex flex-col p-6"
+              className="bg-[#1a2a45] border border-[#243355] hover:border-[#C9A96E]/40 rounded-xl shadow-sm card-hover flex flex-col p-6 transition-colors"
             >
-              <div className="text-4xl mb-4" aria-hidden="true">{condition.emoji}</div>
+              <div className="w-12 h-12 rounded-xl bg-[#C9A96E]/10 border border-[#C9A96E]/20 flex items-center justify-center mb-4">
+                <condition.icon size={22} className="text-[#C9A96E]" />
+              </div>
               <h3 className="font-serif text-xl font-bold text-[#FAFAFA] mb-2">
                 {condition.title}
               </h3>
@@ -111,7 +115,7 @@ export default function ConditionsGrid() {
               </ul>
               <Link
                 href={condition.href}
-                className="inline-flex items-center gap-1 text-sm font-semibold text-[#0f1a2e] hover:gap-2 transition-all"
+                className="inline-flex items-center gap-1 text-sm font-semibold text-[#C9A96E] hover:gap-2 transition-all"
               >
                 Learn More <span aria-hidden="true">&rarr;</span>
               </Link>
@@ -119,8 +123,10 @@ export default function ConditionsGrid() {
           ))}
 
           {/* CTA card */}
-          <div className="bg-[#0f1a2e] rounded-xl shadow-sm flex flex-col items-center justify-center p-6 text-center">
-            <div className="text-4xl mb-4" aria-hidden="true">🏥</div>
+          <div className="bg-[#0f1a2e] border border-[#243355] rounded-xl shadow-sm flex flex-col items-center justify-center p-6 text-center">
+            <div className="w-12 h-12 rounded-xl bg-[#C9A96E]/10 border border-[#C9A96E]/20 flex items-center justify-center mb-4">
+              <Stethoscope size={22} className="text-[#C9A96E]" />
+            </div>
             <h3 className="font-serif text-xl font-bold text-white mb-2">
               Not Sure Where to Start?
             </h3>

@@ -43,11 +43,11 @@ export default function ContactPage() {
       {/* Form + Info */}
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-10">
 
             {/* Contact Form */}
             <div className="lg:col-span-3">
-              <div className="bg-[#1a2a45] border border-[#243355] rounded-2xl p-8">
+              <div className="bg-[#1a2a45] border border-[#243355] rounded-2xl p-4 sm:p-6 lg:p-8">
                 <h2 className="font-serif text-2xl font-bold text-[#FAFAFA] mb-6">Send us a Message</h2>
                 <form className="space-y-5">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
