@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { Building2, Stethoscope, Ear, Microscope, Volume2, FlaskConical, Telescope, Hospital, Heart, BookOpen, Wind, Activity } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Clinic Gallery | Dr. Surabhi Nikam Mirajkar - ENT Specialist Mumbai",
@@ -6,19 +8,19 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://drsurabhinikam.com/gallery" },
 };
 
-const galleryItems = [
-  { id: 1, category: "Clinic", label: "Reception & Waiting Area", emoji: "🏥" },
-  { id: 2, category: "Clinic", label: "Consultation Room", emoji: "🩺" },
-  { id: 3, category: "Clinic", label: "ENT Examination Room", emoji: "👂" },
-  { id: 4, category: "Equipment", label: "Endoscopy System", emoji: "🔬" },
-  { id: 5, category: "Equipment", label: "Audiometry Setup", emoji: "📊" },
-  { id: 6, category: "Equipment", label: "Allergy Testing Station", emoji: "🌿" },
-  { id: 7, category: "Equipment", label: "Surgical Microscope", emoji: "🔭" },
-  { id: 8, category: "Clinic", label: "Procedure Room", emoji: "⚕️" },
-  { id: 9, category: "Events", label: "Health Awareness Camp", emoji: "❤️" },
-  { id: 10, category: "Events", label: "CME Lecture — ENT Updates", emoji: "📚" },
-  { id: 11, category: "Equipment", label: "Nasal Endoscope", emoji: "🔍" },
-  { id: 12, category: "Clinic", label: "Post-Procedure Recovery", emoji: "🛌" },
+const galleryItems: { id: number; category: string; label: string; icon: LucideIcon }[] = [
+  { id: 1, category: "Clinic", label: "Reception & Waiting Area", icon: Building2 },
+  { id: 2, category: "Clinic", label: "Consultation Room", icon: Stethoscope },
+  { id: 3, category: "Clinic", label: "ENT Examination Room", icon: Ear },
+  { id: 4, category: "Equipment", label: "Endoscopy System", icon: Microscope },
+  { id: 5, category: "Equipment", label: "Audiometry Setup", icon: Volume2 },
+  { id: 6, category: "Equipment", label: "Allergy Testing Station", icon: FlaskConical },
+  { id: 7, category: "Equipment", label: "Surgical Microscope", icon: Telescope },
+  { id: 8, category: "Clinic", label: "Procedure Room", icon: Hospital },
+  { id: 9, category: "Events", label: "Health Awareness Camp", icon: Heart },
+  { id: 10, category: "Events", label: "CME Lecture — ENT Updates", icon: BookOpen },
+  { id: 11, category: "Equipment", label: "Nasal Endoscope", icon: Wind },
+  { id: 12, category: "Clinic", label: "Post-Procedure Recovery", icon: Activity },
 ];
 
 const categories = ["All", "Clinic", "Equipment", "Events"];
@@ -30,6 +32,7 @@ export default function GalleryPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-[#C9A96E] mb-3">Our Space</p>
           <h1 className="font-serif text-4xl sm:text-5xl font-bold text-white mb-4">Clinic Gallery</h1>
+          <div className="w-12 h-0.5 bg-gradient-to-r from-transparent via-[#C9A96E] to-transparent mx-auto mb-6" />
           <p className="text-[#94a3b8] text-lg max-w-xl mx-auto">
             A glimpse into our state-of-the-art ENT clinic, equipment, and events. A welcoming, comfortable environment built for your care.
           </p>
@@ -47,8 +50,10 @@ export default function GalleryPage() {
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
             {galleryItems.map((item) => (
               <div key={item.id} className="bg-[#1a2a45] border border-[#243355] rounded-xl shadow-sm card-hover overflow-hidden">
-                <div className="h-40 bg-gradient-to-br from-[#0f1a2e] to-[#e0f2fe] flex items-center justify-center">
-                  <span className="text-5xl">{item.emoji}</span>
+                <div className="h-40 bg-gradient-to-br from-[#0f1a2e] to-[#1a2a45] flex items-center justify-center border-b border-[#243355]">
+                  <div className="w-14 h-14 rounded-2xl bg-[#C9A96E]/10 border border-[#C9A96E]/20 flex items-center justify-center">
+                    <item.icon size={24} className="text-[#C9A96E]" />
+                  </div>
                 </div>
                 <div className="p-3">
                   <span className="text-xs font-semibold text-[#C9A96E] uppercase tracking-wider">{item.category}</span>

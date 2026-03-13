@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Ear, Wind, Mic, Leaf, Brain, Stethoscope } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "ENT Conditions & Treatments Mumbai | Dr. Surabhi Nikam Mirajkar",
@@ -10,49 +11,39 @@ export const metadata: Metadata = {
 
 const conditions = [
   {
-    emoji: "👂",
+    icon: Ear,
     title: "Ear & Hearing",
     href: "/conditions/ear",
     description:
       "Hearing loss, ear infections, tinnitus, vertigo, eardrum perforations, and earwax issues.",
-    color: "from-[#eff6ff] to-[#dbeafe]",
-    borderColor: "border-[#bfdbfe]",
   },
   {
-    emoji: "👃",
+    icon: Wind,
     title: "Nose & Sinuses",
     href: "/conditions/nose-sinus",
     description:
       "Sinusitis, deviated septum, nasal polyps, allergic rhinitis, nosebleeds, and FESS surgery.",
-    color: "from-[#f0fdf4] to-[#dcfce7]",
-    borderColor: "border-[#243355]",
   },
   {
-    emoji: "🗣️",
+    icon: Mic,
     title: "Throat & Voice",
     href: "/conditions/throat-voice",
     description:
       "Tonsillitis, voice disorders, hoarseness, snoring, sleep apnea, and swallowing difficulty.",
-    color: "from-[#fdf4ff] to-[#fae8ff]",
-    borderColor: "border-[#f5d0fe]",
   },
   {
-    emoji: "🌿",
+    icon: Leaf,
     title: "Allergy & Immunotherapy",
     href: "/conditions/allergy",
     description:
       "Allergic rhinitis, dust/pollen/food allergies, skin prick testing, and immunotherapy (SCIT/SLIT).",
-    color: "from-[#f0fdf4] to-[#ccfbf1]",
-    borderColor: "border-[#99f6e4]",
   },
   {
-    emoji: "🧠",
+    icon: Brain,
     title: "Skull Base Surgery",
     href: "/conditions/skull-base-surgery",
     description:
       "Endoscopic skull base surgery, pituitary tumours, sinonasal tumours, CSF leak repair, and choanal atresia.",
-    color: "from-[#fff7ed] to-[#ffedd5]",
-    borderColor: "border-[#fed7aa]",
   },
 ];
 
@@ -68,6 +59,7 @@ export default function ConditionsPage() {
           <h1 className="font-serif text-4xl sm:text-5xl font-bold text-white mb-4">
             Conditions We Treat
           </h1>
+          <div className="w-12 h-0.5 bg-gradient-to-r from-transparent via-[#C9A96E] to-transparent mx-auto mb-6" />
           <p className="text-[#94a3b8] text-lg max-w-2xl mx-auto">
             Comprehensive ENT, allergy, and skull base care — from common infections to complex
             surgical procedures, all under one roof.
@@ -83,22 +75,26 @@ export default function ConditionsPage() {
               <Link
                 key={c.href}
                 href={c.href}
-                className={`group bg-gradient-to-br ${c.color} border ${c.borderColor} rounded-2xl p-8 card-hover block`}
+                className="group bg-[#1a2a45] border border-[#243355] hover:border-[#C9A96E]/40 rounded-2xl p-8 card-hover block transition-colors"
               >
-                <div className="text-5xl mb-5" aria-hidden="true">{c.emoji}</div>
+                <div className="w-14 h-14 rounded-2xl bg-[#C9A96E]/10 border border-[#C9A96E]/20 flex items-center justify-center mb-5">
+                  <c.icon size={26} className="text-[#C9A96E]" />
+                </div>
                 <h2 className="font-serif text-xl font-bold text-[#FAFAFA] mb-2 group-hover:text-[#C9A96E] transition-colors">
                   {c.title}
                 </h2>
                 <p className="text-sm text-[#94a3b8] leading-relaxed mb-4">{c.description}</p>
-                <span className="inline-flex items-center gap-1 text-sm font-semibold text-[#0f1a2e] group-hover:gap-2 transition-all">
+                <span className="inline-flex items-center gap-1 text-sm font-semibold text-[#C9A96E] group-hover:gap-2 transition-all">
                   Explore &rarr;
                 </span>
               </Link>
             ))}
 
             {/* CTA card */}
-            <div className="bg-[#0f1a2e] rounded-2xl p-8 flex flex-col justify-center text-center">
-              <div className="text-5xl mb-5" aria-hidden="true">🩺</div>
+            <div className="bg-[#0f1a2e] border border-[#243355] rounded-2xl p-8 flex flex-col justify-center text-center">
+              <div className="w-14 h-14 rounded-2xl bg-[#C9A96E]/10 border border-[#C9A96E]/20 flex items-center justify-center mb-5 mx-auto">
+                <Stethoscope size={26} className="text-[#C9A96E]" />
+              </div>
               <h2 className="font-serif text-xl font-bold text-white mb-2">
                 Not Sure What You Have?
               </h2>
