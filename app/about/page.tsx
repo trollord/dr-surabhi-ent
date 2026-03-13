@@ -64,7 +64,7 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen bg-[#0f1a2e]">
       {/* Hero */}
-      <section className="pt-24 pb-16 bg-[#C9A96E] text-[#0f1a2e]">
+      <section className="pt-24 pb-16 bg-[#0a1220]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-[#C9A96E] mb-3">
             Meet the Doctor
@@ -217,9 +217,9 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-[#C9A96E] text-[#0f1a2e] text-center">
+      <section className="py-16 bg-[#0f1a2e] text-center">
         <div className="max-w-2xl mx-auto px-4">
-          <h2 className="font-serif text-3xl font-bold mb-4">
+          <h2 className="font-serif text-3xl font-bold text-[#FAFAFA] mb-4">
             Ready to Experience Ethical ENT Care?
           </h2>
           <p className="text-[#94a3b8] mb-8">

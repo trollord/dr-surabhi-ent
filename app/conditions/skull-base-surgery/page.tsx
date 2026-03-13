@@ -26,7 +26,7 @@ const faqs = [
 export default function SkullBasePage() {
   return (
     <main className="min-h-screen bg-[#0f1a2e]">
-      <section className="pt-24 pb-16 bg-[#C9A96E] text-[#0f1a2e]">
+      <section className="pt-24 pb-16 bg-[#0a1220]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="text-sm text-[#C9A96E] mb-6">
             <Link href="/conditions" className="hover:text-white">Conditions</Link>
@@ -105,7 +105,7 @@ export default function SkullBasePage() {
         </div>
       </section>
 
-      <section className="py-16 bg-[#C9A96E] text-[#0f1a2e] text-center">
+      <section className="py-16 bg-[#0f1a2e] text-center">
         <div className="max-w-xl mx-auto px-4">
           <h2 className="font-serif text-2xl font-bold mb-3">Need a Skull Base Consultation?</h2>
           <p className="text-[#94a3b8] mb-6">Contact Dr. Surabhi for a detailed evaluation and expert opinion.</p>

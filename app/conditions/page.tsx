@@ -60,7 +60,7 @@ export default function ConditionsPage() {
   return (
     <main className="min-h-screen bg-[#0f1a2e]">
       {/* Hero */}
-      <section className="pt-24 pb-16 bg-[#C9A96E] text-[#0f1a2e]">
+      <section className="pt-24 pb-16 bg-[#0a1220]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-[#C9A96E] mb-3">
             Areas of Expertise
