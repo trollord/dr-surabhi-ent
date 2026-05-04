@@ -11,7 +11,7 @@ const conditionLinks = [
 
 const quickLinks = [
   { label: "About Dr. Surabhi", href: "/about" },
-  { label: "Gallery", href: "/gallery" },
+  // { label: "Gallery", href: "/gallery" },
   { label: "Testimonials", href: "/testimonials" },
   { label: "Blog", href: "/blog" },
   { label: "Book Consultation", href: "/contact" },
