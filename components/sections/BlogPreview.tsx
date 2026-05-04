@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { Clock, ArrowRight, Leaf, Hospital, Ear } from "lucide-react";
-import type { LucideIcon } from "lucide-react";
+import Image from "next/image";
+import { Clock, ArrowRight } from "lucide-react";
 
-const posts: { slug: string; category: string; readTime: string; title: string; excerpt: string; icon: LucideIcon; categoryColor: string }[] = [
+const posts = [
   {
     slug: "understanding-allergic-rhinitis",
     category: "Allergy",
@@ -10,8 +10,9 @@ const posts: { slug: string; category: string; readTime: string; title: string; 
     title: "Understanding Allergic Rhinitis: Causes, Symptoms & Treatment",
     excerpt:
       "Allergic rhinitis affects millions in India. Learn about the common triggers, how to identify it, and what modern treatment options — including immunotherapy — can offer.",
-    icon: Leaf,
-    categoryColor: "text-[#C9A96E] bg-[#1a2a45]",
+    image: "https://images.unsplash.com/photo-1559757175-7cb057fba93b?auto=format&fit=crop&w=800&q=80",
+    imageAlt: "Woman experiencing allergy symptoms outdoors",
+    categoryColor: "text-[#C9A96E] bg-[#C9A96E]/10 border border-[#C9A96E]/20",
   },
   {
     slug: "fess-surgery-what-to-expect",
@@ -20,8 +21,9 @@ const posts: { slug: string; category: string; readTime: string; title: string; 
     title: "FESS Surgery: What to Expect Before, During & After",
     excerpt:
       "Functional Endoscopic Sinus Surgery (FESS) is a minimally invasive procedure for chronic sinusitis. Here's a complete guide to help you prepare and recover.",
-    icon: Hospital,
-    categoryColor: "text-[#FAFAFA] bg-[#243355]",
+    image: "https://images.unsplash.com/photo-1584516150909-c43483ee7932?auto=format&fit=crop&w=800&q=80",
+    imageAlt: "Doctor consulting patient about ENT surgery procedure",
+    categoryColor: "text-[#FAFAFA] bg-[#243355] border border-[#243355]",
   },
   {
     slug: "when-to-see-an-ent",
@@ -30,8 +32,9 @@ const posts: { slug: string; category: string; readTime: string; title: string; 
     title: "When Should You See an ENT? 10 Warning Signs",
     excerpt:
       "Many ear, nose, and throat problems are brushed off as minor issues. Discover 10 warning signs that mean it's time to consult a specialist like Dr. Surabhi.",
-    icon: Ear,
-    categoryColor: "text-[#0f1a2e] bg-[#C9A96E]",
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80",
+    imageAlt: "ENT specialist consulting a patient",
+    categoryColor: "text-[#0f1a2e] bg-[#C9A96E] border border-[#C9A96E]",
   },
 ];
 
@@ -62,27 +65,32 @@ export default function BlogPreview() {
           {posts.map((post) => (
             <article
               key={post.slug}
-              className="bg-[#0f1a2e] border border-[#243355] rounded-xl shadow-sm card-hover flex flex-col overflow-hidden"
+              className="group bg-[#0f1a2e] border border-[#243355] rounded-xl shadow-sm card-hover flex flex-col overflow-hidden hover:border-[#C9A96E]/30 transition-colors"
             >
-              {/* Icon thumbnail */}
-              <div className="h-32 sm:h-40 md:h-44 bg-gradient-to-br from-[#0f1a2e] to-[#1a2a45] flex items-center justify-center border-b border-[#243355]">
-                <div className="w-16 h-16 rounded-2xl bg-[#C9A96E]/10 border border-[#C9A96E]/20 flex items-center justify-center">
-                  <post.icon size={28} className="text-[#C9A96E]" />
+              {/* Image thumbnail */}
+              <div className="relative h-44 overflow-hidden">
+                <Image
+                  src={post.image}
+                  alt={post.imageAlt}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0f1a2e]/50 to-transparent pointer-events-none" />
+                <div className="absolute top-3 left-3">
+                  <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${post.categoryColor}`}>
+                    {post.category}
+                  </span>
                 </div>
               </div>
 
               <div className="p-6 flex flex-col flex-1">
-                <div className="flex items-center gap-3 mb-3">
-                  <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${post.categoryColor}`}>
-                    {post.category}
-                  </span>
-                  <span className="flex items-center gap-1 text-xs text-[#94a3b8]">
-                    <Clock size={12} />
-                    {post.readTime} read
-                  </span>
+                <div className="flex items-center gap-1 text-xs text-[#94a3b8] mb-3">
+                  <Clock size={12} />
+                  {post.readTime} read
                 </div>
 
-                <h3 className="font-serif text-lg font-bold text-[#FAFAFA] mb-2 line-clamp-2">
+                <h3 className="font-serif text-lg font-bold text-[#FAFAFA] mb-2 line-clamp-2 group-hover:text-[#C9A96E] transition-colors">
                   {post.title}
                 </h3>
                 <p className="text-sm text-[#94a3b8] leading-relaxed mb-4 flex-1 line-clamp-3">

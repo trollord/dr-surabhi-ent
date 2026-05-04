@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Award, GraduationCap, Microscope } from "lucide-react";
 
 const credentials = [
@@ -13,16 +14,18 @@ export default function AboutPreview() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-14 items-center">
 
-          {/* Image placeholder */}
+          {/* Doctor Photo */}
           <div className="relative flex justify-center lg:justify-start">
-            <div className="w-full max-w-xs sm:w-72 sm:h-80 md:w-80 md:h-96 rounded-2xl bg-gradient-to-br from-[#0f1a2e] to-[#1a2a45] flex flex-col items-center justify-center shadow-xl py-12 sm:py-0">
-              <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-[#1a2a45]/20 flex items-center justify-center mb-4">
-                <span className="font-serif text-4xl sm:text-5xl font-bold text-white">S</span>
-              </div>
-              <span className="text-white font-medium text-center px-4 text-sm leading-snug">
-                Dr. Surabhi Nikam Mirajkar
-              </span>
-              <span className="text-[#C9A96E] text-xs mt-1">ENT &amp; Allergy Specialist</span>
+            <div className="relative w-full max-w-sm aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl shadow-black/30 border border-[#C9A96E]/20">
+              <Image
+                src="/doctor-clinic.jpg"
+                alt="Dr. Surabhi Nikam Mirajkar — ENT & Allergy Specialist in clinic"
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0f1a2e]/30 via-transparent to-transparent pointer-events-none" />
             </div>
 
             {/* Floating badge */}

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { GraduationCap, Award, Microscope, Heart, ShieldCheck, Stethoscope, FlaskConical } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -85,14 +86,15 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-14 items-start">
             {/* Image placeholder + credentials */}
             <div className="flex flex-col items-center gap-6">
-              <div className="w-full max-w-xs sm:w-72 sm:h-80 md:w-80 md:h-96 rounded-2xl bg-gradient-to-br from-[#0f1a2e] to-[#1a2a45] flex flex-col items-center justify-center shadow-xl py-10 sm:py-0">
-                <div className="w-28 h-28 rounded-full bg-[#1a2a45]/20 flex items-center justify-center mb-4">
-                  <span className="font-serif text-5xl font-bold text-white">S</span>
-                </div>
-                <span className="text-white font-medium text-center px-4 text-sm leading-snug">
-                  Dr. Surabhi Nikam Mirajkar
-                </span>
-                <span className="text-[#C9A96E] text-xs mt-1">ENT &amp; Allergy Specialist, Mumbai</span>
+              <div className="relative w-full max-w-sm aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl shadow-black/30 border border-[#C9A96E]/20">
+                <Image
+                  src="/doctor-clinic.jpg"
+                  alt="Dr. Surabhi Nikam Mirajkar — ENT & Allergy Specialist"
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 768px) 100vw, 40vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0f1a2e]/30 via-transparent to-transparent pointer-events-none" />
               </div>
 
               <div className="w-full max-w-sm space-y-3">

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useRef } from "react";
 
 const stats = [
@@ -40,63 +41,89 @@ export default function Hero() {
         </svg>
       </div>
 
-      {/* Decorative circles — hidden on mobile to prevent overflow */}
-      <div className="absolute top-20 right-10 w-48 h-48 sm:w-64 sm:h-64 rounded-full opacity-10 border-2 border-white hidden sm:block" aria-hidden="true" />
-      <div className="absolute top-40 right-32 w-28 h-28 sm:w-40 sm:h-40 rounded-full opacity-10 bg-[#1a2a45] hidden sm:block" aria-hidden="true" />
+      {/* Decorative circles */}
       <div className="absolute bottom-32 left-10 w-32 h-32 sm:w-48 sm:h-48 rounded-full opacity-10 border-2 border-[#C9A96E] hidden sm:block" aria-hidden="true" />
-      <div className="absolute top-1/3 right-16 opacity-5 text-white text-5xl sm:text-8xl font-bold select-none hidden sm:block" aria-hidden="true">✚</div>
+      <div className="absolute top-1/3 left-16 opacity-5 text-white text-5xl sm:text-8xl font-bold select-none hidden sm:block" aria-hidden="true">✚</div>
       <div className="absolute bottom-1/3 left-16 opacity-5 text-white text-4xl sm:text-6xl font-bold select-none hidden sm:block" aria-hidden="true">✚</div>
 
-      {/* Main content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-20 sm:pb-32">
-        <div className="max-w-3xl">
-          {/* Badge */}
-          <div className="inline-flex items-center px-3 sm:px-4 py-1.5 rounded-full bg-[#1a2a45]/10 border border-white/20 text-white text-xs font-medium mb-6 backdrop-blur-sm">
-            <span className="w-2 h-2 rounded-full bg-[#C9A96E] mr-2 animate-pulse shrink-0" />
-            ENT Specialist · Allergy · Skull Base Surgery · Mumbai
+      {/* Main content — two-column on large screens */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-20 sm:pb-32 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+
+          {/* Left: text */}
+          <div>
+            {/* Badge */}
+            <div className="inline-flex items-center px-3 sm:px-4 py-1.5 rounded-full bg-[#1a2a45]/10 border border-white/20 text-white text-xs font-medium mb-6 backdrop-blur-sm">
+              <span className="w-2 h-2 rounded-full bg-[#C9A96E] mr-2 animate-pulse shrink-0" />
+              ENT Specialist · Allergy · Skull Base Surgery · Mumbai
+            </div>
+
+            {/* Heading */}
+            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-3">
+              Expert ENT Care
+            </h1>
+            <p className="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6">
+              <span className="bg-gradient-to-r from-[#C9A96E] to-[#D4B483] bg-clip-text text-transparent">
+                with a Human Touch
+              </span>
+            </p>
+
+            <p className="text-sm sm:text-base lg:text-lg text-[#94a3b8] leading-relaxed mb-8 max-w-xl">
+              Dr. Surabhi Nikam Mirajkar — MBBS, MS (ENT), Allergy Specialist, Fellowship in Skull
+              Base Surgery — brings advanced expertise combined with a deeply human touch to every
+              consultation. Ethical, evidence-based ENT care in Mumbai.
+            </p>
+
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-12 sm:mb-14">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-[#C9A96E] text-white font-semibold text-sm sm:text-base hover:bg-[#D4B483] transition-colors shadow-lg"
+              >
+                Book Consultation
+              </Link>
+              <Link
+                href="/conditions"
+                className="inline-flex items-center justify-center px-6 sm:px-7 py-3 sm:py-3.5 rounded-full border-2 border-white text-white font-semibold text-sm sm:text-base hover:bg-[#1a2a45] hover:text-[#C9A96E] transition-colors"
+              >
+                View Conditions
+              </Link>
+            </div>
+
+            {/* Stats row */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
+              {stats.map((stat) => (
+                <div key={stat.label} className="text-center sm:text-left">
+                  <div className="font-serif text-2xl sm:text-3xl font-bold text-white">{stat.value}</div>
+                  <div className="text-xs sm:text-sm text-[#C9A96E] mt-0.5">{stat.label}</div>
+                </div>
+              ))}
+            </div>
           </div>
 
-          {/* Heading */}
-          <h1 className="font-serif text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight mb-3">
-            Expert ENT Care
-          </h1>
-          <p className="font-serif text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight mb-6">
-            <span className="bg-gradient-to-r from-[#C9A96E] to-[#D4B483] bg-clip-text text-transparent">
-              with a Human Touch
-            </span>
-          </p>
-
-          <p className="text-sm sm:text-base lg:text-lg text-[#94a3b8] leading-relaxed mb-8 max-w-2xl">
-            Dr. Surabhi Nikam Mirajkar — MBBS, MS (ENT), Allergy Specialist, Fellowship in Skull
-            Base Surgery — brings advanced expertise combined with a deeply human touch to every
-            consultation. Ethical, evidence-based ENT care in Mumbai.
-          </p>
-
-          {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-12 sm:mb-14">
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-[#C9A96E] text-white font-semibold text-sm sm:text-base hover:bg-[#D4B483] transition-colors shadow-lg"
-            >
-              Book Consultation
-            </Link>
-            <Link
-              href="/conditions"
-              className="inline-flex items-center justify-center px-6 sm:px-7 py-3 sm:py-3.5 rounded-full border-2 border-white text-white font-semibold text-sm sm:text-base hover:bg-[#1a2a45] hover:text-[#C9A96E] transition-colors"
-            >
-              View Conditions
-            </Link>
-          </div>
-
-          {/* Stats row */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
-            {stats.map((stat) => (
-              <div key={stat.label} className="text-center sm:text-left">
-                <div className="font-serif text-2xl sm:text-3xl font-bold text-white">{stat.value}</div>
-                <div className="text-xs sm:text-sm text-[#C9A96E] mt-0.5">{stat.label}</div>
+          {/* Right: surgery photo */}
+          <div className="hidden lg:flex justify-end">
+            <div className="relative w-full max-w-md">
+              {/* Main surgery image */}
+              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-[#C9A96E]/20 shadow-2xl shadow-black/40">
+                <Image
+                  src="/doctor-surgery.jpg"
+                  alt="Dr. Surabhi Nikam Mirajkar performing ENT surgery"
+                  fill
+                  className="object-cover object-center"
+                  sizes="50vw"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0f1a2e]/50 via-transparent to-transparent pointer-events-none" />
               </div>
-            ))}
+              {/* Floating label */}
+              <div className="absolute -bottom-4 -left-4 bg-[#1a2a45] border border-[#C9A96E]/30 rounded-xl px-4 py-3 shadow-xl">
+                <p className="text-[#C9A96E] text-xs font-semibold uppercase tracking-widest">Advanced</p>
+                <p className="text-white text-sm font-serif font-bold">ENT Surgery</p>
+              </div>
+            </div>
           </div>
+
         </div>
       </div>
     </section>
