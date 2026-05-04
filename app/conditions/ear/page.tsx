@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Ear Conditions & Hearing Treatment Mumbai | Dr. Surabhi Nikam Mirajkar",
+  title: "Ear Conditions, Hearing Loss & Ear Surgery Mumbai | Dr. Surabhi Nikam Mirajkar",
   description:
-    "Expert diagnosis and treatment of ear conditions — hearing loss, ear infections, tinnitus, vertigo, eardrum perforation — by ENT specialist Dr. Surabhi in Mumbai.",
+    "Expert diagnosis and treatment of ear conditions — hearing loss, sensorineural hearing loss, ear infections, tinnitus, vertigo, eardrum perforation, and ear surgeries — by ENT specialist Dr. Surabhi in Mumbai.",
   alternates: { canonical: "https://drsurabhinikam.com/conditions/ear" },
 };
 
@@ -53,6 +53,53 @@ const conditions = [
   },
 ];
 
+const earSurgeries = [
+  {
+    name: "Myringotomy & Tympanostomy Tube Insertion",
+    description:
+      "Myringotomy is a surgical procedure involving a small incision in the eardrum to relieve pressure from excessive fluid buildup, typically resulting from chronic otitis media. Tympanostomy tubes (grommets) are often inserted to allow air circulation in the middle ear, particularly in children with recurrent ear infections.",
+    details: [
+      "Performed under general anaesthesia",
+      "Procedure takes approximately 15 minutes",
+      "Tubes typically fall out naturally within 6–18 months",
+      "Commonly recommended for children with recurrent ear infections",
+    ],
+  },
+  {
+    name: "Tympanoplasty",
+    description:
+      "Tympanoplasty is performed to repair a perforated eardrum or address middle ear issues. The surgeon makes an incision in the ear canal, lifts the ear canal skin, and grafts tissue onto the perforation to create a seal that promotes healing and prevents recurrent infections.",
+    details: [
+      "Effectively restores hearing after eardrum perforation",
+      "Prevents recurrent infections from entering the middle ear",
+      "Tissue graft sourced from the patient's own body",
+      "Day procedure or short hospital stay",
+    ],
+  },
+  {
+    name: "Mastoidectomy",
+    description:
+      "Mastoidectomy involves the surgical removal of infected or diseased cells from the mastoid bone located behind the ear. This procedure prevents infection from spreading to the skull and is typically performed for chronic mastoid infections that do not respond to conservative treatment.",
+    details: [
+      "Performed under general anaesthesia",
+      "Prevents spread of infection to surrounding structures",
+      "May be combined with tympanoplasty (combined approach)",
+      "Surgical extent tailored to the degree of disease",
+    ],
+  },
+  {
+    name: "Stapedectomy",
+    description:
+      "Stapedectomy treats otosclerosis — a condition where abnormal bone growth prevents the stapes (a tiny bone in the middle ear) from transmitting sound to the inner ear. The procedure involves removing and replacing the stapes with a prosthetic device to restore sound transmission and improve hearing.",
+    details: [
+      "Highly effective for conductive hearing loss due to otosclerosis",
+      "Prosthetic stapes restores normal sound conduction",
+      "Significant improvement in hearing outcomes",
+      "Performed under local or general anaesthesia",
+    ],
+  },
+];
+
 const faqs = [
   {
     q: "How do I know if I need to see an ENT for my ear problem?",
@@ -64,11 +111,19 @@ const faqs = [
   },
   {
     q: "Can hearing loss be treated?",
-    a: "It depends on the type and cause. Conductive hearing loss due to wax or infections is often treatable. Sensorineural loss may require hearing aids. Early evaluation gives the best outcomes.",
+    a: "It depends on the type and cause. Conductive hearing loss due to wax or infections is often treatable. Sensorineural loss may require hearing aids or cochlear implants. Early evaluation gives the best outcomes.",
   },
   {
     q: "What is BPPV and how is it treated?",
     a: "BPPV (Benign Paroxysmal Positional Vertigo) is caused by small crystals dislodging in the inner ear. It is treated with the Epley maneuver — a series of head movements performed by your ENT.",
+  },
+  {
+    q: "What are tympanostomy tubes and when are they needed?",
+    a: "Tympanostomy tubes (grommets) are tiny ventilation tubes inserted into the eardrum to allow air into the middle ear and drain fluid. They are recommended for children with recurrent ear infections or persistent fluid affecting hearing.",
+  },
+  {
+    q: "Can stapedectomy fully restore hearing?",
+    a: "In most cases, stapedectomy significantly improves hearing in patients with otosclerosis. Many patients experience near-normal hearing after the procedure. Results vary depending on the severity and individual anatomy.",
   },
 ];
 
@@ -89,7 +144,7 @@ export default function EarPage() {
           </h1>
           <p className="text-[#94a3b8] text-lg max-w-2xl">
             Comprehensive diagnosis and treatment of ear conditions. From common infections to
-            hearing loss, vertigo, and eardrum repair — expert care by Dr. Surabhi Nikam Mirajkar.
+            hearing loss, vertigo, and advanced ear surgeries — expert care by Dr. Surabhi Nikam Mirajkar.
           </p>
         </div>
       </section>
@@ -117,14 +172,14 @@ export default function EarPage() {
                   <ul className="space-y-1">
                     {c.symptoms.map((s) => (
                       <li key={s} className="flex items-start gap-2 text-sm text-[#FAFAFA]">
-                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#0f1a2e] shrink-0" />
+                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#C9A96E] shrink-0" />
                         {s}
                       </li>
                     ))}
                   </ul>
                 </div>
                 <div className="bg-[#0f1a2e] rounded-lg p-3">
-                  <p className="text-xs font-semibold uppercase tracking-widest text-[#0f1a2e] mb-1">
+                  <p className="text-xs font-semibold uppercase tracking-widest text-[#C9A96E] mb-1">
                     Treatment Approach
                   </p>
                   <p className="text-sm text-[#FAFAFA]">{c.treatment}</p>
@@ -132,6 +187,123 @@ export default function EarPage() {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Sensorineural Hearing Loss */}
+      <section className="py-20 bg-[#0a1220]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-sm font-semibold uppercase tracking-widest text-[#C9A96E] mb-2">
+              In Depth
+            </p>
+            <h2 className="font-serif text-3xl font-bold text-[#FAFAFA] mb-4">
+              Sensorineural Hearing Loss
+            </h2>
+            <p className="text-[#94a3b8] max-w-3xl mx-auto">
+              Sensorineural hearing loss (SNHL) occurs when the delicate hair cells in the inner ear or the
+              auditory nerve pathways become damaged, preventing sound signals from properly reaching the brain.
+              Unlike conductive hearing loss, SNHL is typically permanent and cannot be reversed through
+              medication or surgery alone.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
+            <div className="bg-[#1a2a45] border border-[#243355] rounded-xl p-6">
+              <h3 className="font-serif text-xl font-bold text-[#C9A96E] mb-3">Understanding Presbyacusis</h3>
+              <p className="text-sm text-[#94a3b8] leading-relaxed">
+                Presbyacusis, or age-related hearing loss, is the most common type of sensorineural hearing loss
+                affecting adults. This gradual condition typically begins after age 60 and affects both ears equally,
+                making it difficult to hear high-pitched sounds and understand conversations — especially in noisy
+                environments. Presbyacusis develops due to natural changes in the inner ear structures, reduced blood
+                flow, and cumulative lifetime noise exposure.
+              </p>
+            </div>
+
+            <div className="bg-[#1a2a45] border border-[#243355] rounded-xl p-6">
+              <h3 className="font-serif text-xl font-bold text-[#C9A96E] mb-3">Hearing Solutions Available</h3>
+              <p className="text-sm text-[#94a3b8] leading-relaxed mb-4">
+                Modern hearing solutions offer significant improvements in quality of life. Options are tailored
+                to the degree and type of hearing loss.
+              </p>
+              <ul className="space-y-2">
+                {[
+                  "Hearing aids — digital technology to amplify speech and reduce background noise",
+                  "Cochlear implants — for severe to profound hearing loss, bypassing damaged hair cells",
+                  "Tinnitus management — sound therapy and retraining for associated ringing",
+                  "Comprehensive audiological evaluation to choose the right solution",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2 text-sm text-[#FAFAFA]">
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#C9A96E] shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-[#1a2a45] border border-[#C9A96E]/30 rounded-xl p-6 text-center max-w-3xl mx-auto">
+            <p className="text-[#FAFAFA] font-medium mb-2">Early Intervention Is Crucial</p>
+            <p className="text-sm text-[#94a3b8] mb-5">
+              If you&apos;re experiencing difficulty hearing conversations, frequently asking people to repeat
+              themselves, or turning up the television volume — schedule a comprehensive hearing evaluation.
+              Our team can assess your hearing loss and recommend personalised solutions.
+            </p>
+            <Link
+              href="/contact"
+              className="inline-flex items-center px-6 py-2.5 rounded-full bg-[#C9A96E] text-white text-sm font-semibold hover:bg-[#D4B483] transition-colors"
+            >
+              Book a Hearing Evaluation
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Ear Surgery Procedures */}
+      <section className="py-20 bg-[#0f1a2e]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-sm font-semibold uppercase tracking-widest text-[#C9A96E] mb-2">
+              Surgical Interventions
+            </p>
+            <h2 className="font-serif text-3xl font-bold text-[#FAFAFA] mb-4">
+              Ear Surgery Procedures
+            </h2>
+            <p className="text-[#94a3b8] max-w-2xl mx-auto">
+              Advanced otologic procedures for hearing restoration and ear health. Each intervention is
+              tailored to the patient&apos;s specific condition, age, and overall health status.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {earSurgeries.map((surgery) => (
+              <div
+                key={surgery.name}
+                className="bg-[#1a2a45] border border-[#243355] rounded-xl p-6 hover:border-[#C9A96E]/40 transition-colors"
+              >
+                <h3 className="font-serif text-xl font-bold text-[#FAFAFA] mb-3">{surgery.name}</h3>
+                <p className="text-sm text-[#94a3b8] leading-relaxed mb-4">{surgery.description}</p>
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-widest text-[#C9A96E] mb-2">
+                    Key Details
+                  </p>
+                  <ul className="space-y-1.5">
+                    {surgery.details.map((d) => (
+                      <li key={d} className="flex items-start gap-2 text-sm text-[#FAFAFA]">
+                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#C9A96E] shrink-0" />
+                        {d}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-center text-sm text-[#94a3b8] mt-8 max-w-2xl mx-auto">
+            Most ear surgeries are outpatient procedures, allowing patients to return home the same day.
+            Proper post-operative care is essential for optimal recovery.
+          </p>
         </div>
       </section>
 
@@ -147,11 +319,11 @@ export default function EarPage() {
             {faqs.map((faq) => (
               <details
                 key={faq.q}
-                className="group bg-[#1a2a45] border border-[#243355] rounded-xl overflow-hidden"
+                className="group bg-[#0f1a2e] border border-[#243355] rounded-xl overflow-hidden"
               >
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer font-medium text-[#FAFAFA] hover:text-[#C9A96E] list-none">
                   {faq.q}
-                  <span className="ml-4 text-[#0f1a2e] text-xl leading-none group-open:rotate-45 transition-transform inline-block">
+                  <span className="ml-4 text-[#C9A96E] text-xl leading-none group-open:rotate-45 transition-transform inline-block">
                     +
                   </span>
                 </summary>

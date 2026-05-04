@@ -6,10 +6,10 @@ import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 const testimonials = [
   {
     name: "Priya M.",
-    condition: "Sinusitis",
+    condition: "Chronic Sinusitis",
     stars: 5,
     quote:
-      "Dr. Surabhi was so patient and explained everything clearly. After years of chronic sinusitis, I finally have a proper treatment plan. She took the time to understand my history before suggesting any procedure — something I truly appreciated.",
+      "Dr. Surabhi was so patient and explained everything clearly. After years of chronic sinusitis, I finally have a proper treatment plan. She took the time to understand my full history before suggesting any procedure — something I truly appreciated.",
   },
   {
     name: "Rahul S.",
@@ -19,11 +19,11 @@ const testimonials = [
       "Finally found an ENT who actually listens. I had been to multiple doctors but no one gave me a proper diagnosis. Dr. Surabhi identified the issue quickly, explained it thoroughly, and the treatment worked. Highly recommend her.",
   },
   {
-    name: "Anita K.",
-    condition: "Allergic Rhinitis",
+    name: "Kavya R.",
+    condition: "Nasal Polyps & FESS Surgery",
     stars: 5,
     quote:
-      "The allergy testing was thorough and the treatment worked wonders. I had been sneezing and suffering from blocked nose for years. Dr. Surabhi's approach to allergy care is comprehensive — she really knows her subject.",
+      "Had recurrent nasal polyps for years. Dr. Surabhi explained the connection to my allergies and treated both conditions together. Post-surgery recovery was smooth and there has been no recurrence so far. Truly excellent care.",
   },
   {
     name: "Vikram P.",
@@ -33,11 +33,46 @@ const testimonials = [
       "Minimal pain, quick recovery, and breathing freely for the first time in years. The surgery went smoothly. Dr. Surabhi made sure I understood every step and was always available for queries. A truly skilled and caring surgeon.",
   },
   {
+    name: "Sunita B.",
+    condition: "Vertigo (BPPV)",
+    stars: 5,
+    quote:
+      "The Epley maneuver Dr. Surabhi performed resolved my vertigo in a single visit. I had been dizzy for weeks and was very anxious. She was calm, explained exactly what she was doing, and the result was immediate. Exceptional.",
+  },
+  {
     name: "Meera D.",
     condition: "Tonsillectomy",
     stars: 5,
     quote:
-      "Dr. Surabhi made the whole experience stress-free. I was anxious about the surgery but she walked me through everything beforehand. Post-surgery support was excellent too. My daughter is doing great now. Thank you so much!",
+      "Dr. Surabhi made the whole experience stress-free. I was anxious about the surgery but she walked me through everything beforehand. Post-surgery support was excellent. My daughter is doing great now. Thank you so much!",
+  },
+  {
+    name: "Rohan J.",
+    condition: "Sleep Apnea",
+    stars: 5,
+    quote:
+      "Snoring and sleep apnea were affecting my work and family life. Dr. Surabhi did a thorough evaluation and suggested a targeted treatment plan. I am sleeping properly for the first time in years. Cannot thank her enough.",
+  },
+  {
+    name: "Anita K.",
+    condition: "Allergic Rhinitis",
+    stars: 5,
+    quote:
+      "The allergy testing was thorough and the immunotherapy worked wonders. I had been sneezing and suffering from a blocked nose for years. Dr. Surabhi's approach to allergy care is comprehensive — she really knows her subject.",
+  },
+  {
+    name: "Aditya N.",
+    condition: "Skull Base Surgery",
+    stars: 5,
+    quote:
+      "Dr. Surabhi coordinated my pituitary surgery alongside the neurosurgery team. She was calm, confident, and kept me informed throughout. Her expertise in endoscopic skull base surgery is outstanding. Excellent post-operative care.",
+  },
+  {
+    name: "Suresh T.",
+    condition: "Tinnitus",
+    stars: 5,
+    quote:
+      "I had been living with ringing in my ears for over a year. Dr. Surabhi ran a thorough evaluation, explained the possible causes, and gave me a clear management plan. Significantly better now. Very grateful for her care.",
   },
 ];
 

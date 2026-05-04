@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Ear, Wind, Mic, Leaf, Brain, Stethoscope } from "lucide-react";
+import { Ear, Wind, Mic, Leaf, Brain, Stethoscope, Baby, HeartPulse, BedDouble } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 const conditions: { icon: LucideIcon; title: string; href: string; description: string; bullets: string[] }[] = [
@@ -68,6 +68,45 @@ const conditions: { icon: LucideIcon; title: string; href: string; description: 
       "Choanal Atresia",
     ],
   },
+  {
+    icon: Baby,
+    title: "Pediatric ENT Surgery",
+    href: "/conditions/ear",
+    description:
+      "Specialised care for children's ear, nose, and throat conditions — from grommets to tonsillectomy.",
+    bullets: [
+      "Tympanostomy Tube Insertion (Grommets)",
+      "Tonsillectomy & Adenoidectomy",
+      "Recurrent Ear Infections",
+      "Paediatric Airway Assessment",
+    ],
+  },
+  {
+    icon: HeartPulse,
+    title: "Head & Neck Surgery",
+    href: "/conditions/skull-base-surgery",
+    description:
+      "Comprehensive management of head and neck disorders, including tumours and lymph node conditions.",
+    bullets: [
+      "Neck Lump Assessment",
+      "Thyroid & Parathyroid Conditions",
+      "Parotid & Salivary Gland Disorders",
+      "Head & Neck Oncology Support",
+    ],
+  },
+  {
+    icon: BedDouble,
+    title: "Sleep Surgery",
+    href: "/conditions/throat-voice",
+    description:
+      "Surgical solutions for snoring and obstructive sleep apnea, targeting the site of upper airway obstruction.",
+    bullets: [
+      "Tonsillectomy for Sleep Apnea",
+      "Uvulopalatopharyngoplasty (UPPP)",
+      "Turbinate Reduction",
+      "Nasal Airway Correction",
+    ],
+  },
 ];
 
 export default function ConditionsGrid() {
@@ -77,15 +116,15 @@ export default function ConditionsGrid() {
         {/* Section header */}
         <div className="text-center mb-12">
           <p className="text-sm font-semibold uppercase tracking-widest text-[#C9A96E] mb-2">
-            Areas of Expertise
+            Our Services
           </p>
           <div className="section-divider mx-auto" />
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#FAFAFA] mb-4">
-            Conditions We Treat
+            Comprehensive ENT &amp; Skull Base Care
           </h2>
           <p className="text-[#94a3b8] max-w-2xl mx-auto">
-            From common ear infections to complex skull base surgeries, Dr. Surabhi offers
-            comprehensive ENT care with a minimally invasive, patient-first approach.
+            Expert solutions for complex ENT and skull base conditions. From common ear infections to
+            advanced skull base surgery, Dr. Surabhi offers comprehensive, minimally invasive care.
           </p>
         </div>
 

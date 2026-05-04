@@ -129,6 +129,81 @@ export default function ThroatVoicePage() {
         </div>
       </section>
 
+      {/* Throat Surgery Procedures */}
+      <section className="py-20 bg-[#0a1220]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-sm font-semibold uppercase tracking-widest text-[#C9A96E] mb-2">
+              Surgical Interventions
+            </p>
+            <h2 className="font-serif text-3xl font-bold text-[#FAFAFA] mb-4">
+              Throat Surgery Procedures
+            </h2>
+            <p className="text-[#94a3b8] max-w-2xl mx-auto">
+              Treatment for voice, swallowing, and airway disorders. Procedures are tailored to the patient&apos;s
+              specific condition, age, and health status to ensure the most effective treatment.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Tonsillectomy & Adenoidectomy */}
+            <div className="bg-[#1a2a45] border border-[#243355] rounded-xl p-6 hover:border-[#C9A96E]/40 transition-colors">
+              <h3 className="font-serif text-xl font-bold text-[#FAFAFA] mb-3">Tonsillectomy &amp; Adenoidectomy</h3>
+              <p className="text-sm text-[#94a3b8] leading-relaxed mb-4">
+                Tonsillectomy involves the removal of the tonsils — lymphoid tissues at the back of the throat.
+                It is commonly recommended for patients with recurrent tonsillitis, sleep apnea, or obstructive
+                sleep disorders. Adenoidectomy removes adenoid tissue located behind the nose and is often
+                performed alongside tonsillectomy. Both are among the most frequently performed ENT surgeries,
+                especially in children with chronic inflammation or recurrent infections.
+              </p>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-widest text-[#C9A96E] mb-2">Key Details</p>
+                <ul className="space-y-1.5">
+                  {[
+                    "Performed under general anaesthesia",
+                    "Procedure typically takes approximately 30 minutes",
+                    "Same-day discharge possible in most cases",
+                    "Highly effective for recurrent tonsillitis and obstructive sleep apnea",
+                  ].map((d) => (
+                    <li key={d} className="flex items-start gap-2 text-sm text-[#FAFAFA]">
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#C9A96E] shrink-0" />
+                      {d}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Tracheostomy */}
+            <div className="bg-[#1a2a45] border border-[#243355] rounded-xl p-6 hover:border-[#C9A96E]/40 transition-colors">
+              <h3 className="font-serif text-xl font-bold text-[#FAFAFA] mb-3">Tracheostomy</h3>
+              <p className="text-sm text-[#94a3b8] leading-relaxed mb-4">
+                Tracheostomy creates an alternative airway in the throat for patients experiencing difficulty
+                breathing. A small opening is made in the front of the neck into the trachea (windpipe), through
+                which a tube is placed to allow air to reach the lungs directly. This procedure may be temporary
+                or permanent, depending on the underlying condition requiring intervention.
+              </p>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-widest text-[#C9A96E] mb-2">Key Details</p>
+                <ul className="space-y-1.5">
+                  {[
+                    "Provides a secure, direct airway when normal breathing is compromised",
+                    "Can be temporary (short-term) or permanent depending on the condition",
+                    "Performed under general anaesthesia in a hospital setting",
+                    "Comprehensive post-operative care and guidance provided",
+                  ].map((d) => (
+                    <li key={d} className="flex items-start gap-2 text-sm text-[#FAFAFA]">
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#C9A96E] shrink-0" />
+                      {d}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="py-20 bg-[#1a2a45]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -141,11 +216,11 @@ export default function ThroatVoicePage() {
             {faqs.map((faq) => (
               <details
                 key={faq.q}
-                className="group bg-[#1a2a45] border border-[#243355] rounded-xl overflow-hidden"
+                className="group bg-[#0f1a2e] border border-[#243355] rounded-xl overflow-hidden"
               >
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer font-medium text-[#FAFAFA] hover:text-[#C9A96E] list-none">
                   {faq.q}
-                  <span className="ml-4 text-[#0f1a2e] text-xl leading-none group-open:rotate-45 transition-transform inline-block">
+                  <span className="ml-4 text-[#C9A96E] text-xl leading-none group-open:rotate-45 transition-transform inline-block">
                     +
                   </span>
                 </summary>

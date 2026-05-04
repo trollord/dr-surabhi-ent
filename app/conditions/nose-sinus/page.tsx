@@ -136,6 +136,80 @@ export default function NoseSinusPage() {
         </div>
       </section>
 
+      {/* Nose & Sinus Surgery Procedures */}
+      <section className="py-20 bg-[#0a1220]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-sm font-semibold uppercase tracking-widest text-[#C9A96E] mb-2">
+              Surgical Interventions
+            </p>
+            <h2 className="font-serif text-3xl font-bold text-[#FAFAFA] mb-4">
+              Nose &amp; Sinus Surgery Procedures
+            </h2>
+            <p className="text-[#94a3b8] max-w-2xl mx-auto">
+              Minimally invasive procedures to restore breathing and sinus function. Modern endoscopic
+              techniques allow for precise correction with minimal disruption and faster recovery.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Septoplasty */}
+            <div className="bg-[#1a2a45] border border-[#243355] rounded-xl p-6 hover:border-[#C9A96E]/40 transition-colors">
+              <h3 className="font-serif text-xl font-bold text-[#FAFAFA] mb-3">Septoplasty</h3>
+              <p className="text-sm text-[#94a3b8] leading-relaxed mb-4">
+                Septoplasty is the surgical correction of a deviated nasal septum to enable clear breathing and
+                prevent nasal obstruction. This procedure addresses structural abnormalities that interfere with
+                proper airflow through the nasal passages.
+              </p>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-widest text-[#C9A96E] mb-2">Key Details</p>
+                <ul className="space-y-1.5">
+                  {[
+                    "Straightens the cartilage and bone dividing the nostrils",
+                    "Minimally invasive — performed entirely inside the nose",
+                    "Significant improvement in nasal airflow",
+                    "Day procedure — same-day discharge in most cases",
+                  ].map((d) => (
+                    <li key={d} className="flex items-start gap-2 text-sm text-[#FAFAFA]">
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#C9A96E] shrink-0" />
+                      {d}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* FESS */}
+            <div className="bg-[#1a2a45] border border-[#243355] rounded-xl p-6 hover:border-[#C9A96E]/40 transition-colors">
+              <h3 className="font-serif text-xl font-bold text-[#FAFAFA] mb-3">Functional Endoscopic Sinus Surgery (FESS)</h3>
+              <p className="text-sm text-[#94a3b8] leading-relaxed mb-4">
+                FESS is a minimally invasive procedure for patients with chronic sinusitis or seriously inflamed,
+                infected, or blocked sinuses. Modern endoscopic techniques provide enhanced visualisation of the
+                sinus passages, allowing surgeons to open blocked areas and improve airflow with minimal tissue
+                disruption. Some procedures utilise balloon sinuplasty, which requires minimal cutting and offers
+                quicker recovery times.
+              </p>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-widest text-[#C9A96E] mb-2">Key Details</p>
+                <ul className="space-y-1.5">
+                  {[
+                    "Endoscopic — no external incisions or cuts",
+                    "Removes polyps and opens blocked sinus drainage pathways",
+                    "Balloon sinuplasty option for quicker recovery",
+                    "Most patients return home the same day",
+                  ].map((d) => (
+                    <li key={d} className="flex items-start gap-2 text-sm text-[#FAFAFA]">
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#C9A96E] shrink-0" />
+                      {d}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="py-20 bg-[#1a2a45]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -148,11 +222,11 @@ export default function NoseSinusPage() {
             {faqs.map((faq) => (
               <details
                 key={faq.q}
-                className="group bg-[#1a2a45] border border-[#243355] rounded-xl overflow-hidden"
+                className="group bg-[#0f1a2e] border border-[#243355] rounded-xl overflow-hidden"
               >
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer font-medium text-[#FAFAFA] hover:text-[#C9A96E] list-none">
                   {faq.q}
-                  <span className="ml-4 text-[#0f1a2e] text-xl leading-none group-open:rotate-45 transition-transform inline-block">
+                  <span className="ml-4 text-[#C9A96E] text-xl leading-none group-open:rotate-45 transition-transform inline-block">
                     +
                   </span>
                 </summary>
