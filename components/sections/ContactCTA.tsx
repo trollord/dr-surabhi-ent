@@ -28,7 +28,7 @@ export default function ContactCTA() {
               Book Consultation
             </Link>
             <a
-              href={`https://wa.me/919876543210?text=${whatsappMsg}`}
+              href={`https://wa.me/919969561969?text=${whatsappMsg}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full border-2 border-white text-white font-semibold text-base hover:bg-[#1a2a45] hover:text-[#C9A96E] transition-colors"
@@ -57,8 +57,8 @@ export default function ContactCTA() {
             </div>
             <div>
               <p className="text-xs text-[#C9A96E] uppercase font-semibold mb-1">Phone</p>
-              <a href="tel:+919876543210" className="text-white text-sm hover:text-[#C9A96E] transition-colors">
-                +91 98765 43210
+              <a href="tel:+919969561969" className="text-white text-sm hover:text-[#C9A96E] transition-colors">
+                +91 99695 61969
               </a>
             </div>
           </div>

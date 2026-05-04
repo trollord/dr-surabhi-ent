@@ -19,8 +19,8 @@ const conditionOptions = [
 ];
 
 const contactItems = [
-  { icon: MapPin, label: "Address", value: "Mumbai, Maharashtra, India", href: null, sub: null },
-  { icon: Phone, label: "Phone", value: "+91 98765 43210", href: "tel:+919876543210", sub: null },
+  { icon: MapPin, label: "Address", value: "G4 Akansha C.H.S, Navpada, Thane, Maharashtra", href: null, sub: null },
+  { icon: Phone, label: "Phone", value: "+91 99695 61969", href: "tel:+919969561969", sub: null },
   { icon: Mail, label: "Email", value: "dr.surabhi@drsurabhinikam.com", href: "mailto:dr.surabhi@drsurabhinikam.com", sub: null },
   { icon: Clock, label: "Clinic Hours", value: "Mon – Sat: 10 AM – 7 PM", href: null, sub: "Sunday: By appointment only" },
 ];
@@ -133,7 +133,7 @@ export default function ContactPage() {
               <div className="bg-[#1a2a45] border border-[#243355] rounded-2xl p-6">
                 <p className="text-[#C9A96E] text-xs font-sans font-semibold uppercase tracking-widest mb-2">Quick Connect</p>
                 <p className="text-sm text-[#94a3b8] font-sans mb-4">Prefer WhatsApp? Message Dr. Surabhi directly.</p>
-                <a href="https://wa.me/919876543210?text=Hi%20Dr.%20Surabhi%2C%20I%27d%20like%20to%20book%20a%20consultation."
+                <a href="https://wa.me/919969561969?text=Hi%20Dr.%20Surabhi%2C%20I%27d%20like%20to%20book%20a%20consultation."
                   target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-white text-sm font-semibold hover:opacity-90 transition-opacity font-sans"
                   style={{ backgroundColor: "#25D366" }}>
@@ -147,6 +147,20 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Google Maps */}
+      <section className="bg-[#0a1220]">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d771.4463985305916!2d72.9664114139195!3d19.188622098828635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b98aa0a7a18f%3A0x5bee53b763628b30!2sDr%20Girish%20Mirajkar%20%7C%20Plastic%20Surgeon%20%7C%20Thane!5e1!3m2!1sen!2sin!4v1777452007518!5m2!1sen!2sin"
+          width="100%"
+          height="400"
+          style={{ border: 0, display: "block" }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="Clinic Location — G4 Akansha C.H.S, Navpada, Thane"
+        />
       </section>
     </main>
   );
