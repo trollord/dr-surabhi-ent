@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Phone, Mail, MapPin, Clock, ShieldCheck, MessageCircle } from "lucide-react";
+import ContactForm from "./ContactForm";
 
 export const metadata: Metadata = {
   title: "Book a Consultation | Dr. Surabhi Nikam Mirajkar ENT Mumbai",
@@ -7,16 +8,6 @@ export const metadata: Metadata = {
     "Book a consultation with Dr. Surabhi Nikam Mirajkar, ENT & Allergy Specialist in Mumbai. Ethical, transparent, patient-first care. Call or WhatsApp today.",
   alternates: { canonical: "https://drsurabhinikam.com/contact" },
 };
-
-const conditionOptions = [
-  "Ear & Hearing",
-  "Nose & Sinuses",
-  "Throat & Voice",
-  "Allergy & Immunotherapy",
-  "Skull Base Surgery",
-  "General ENT Query",
-  "Other",
-];
 
 export default function ContactPage() {
   return (
@@ -80,112 +71,7 @@ export default function ContactPage() {
 
             {/* Contact Form */}
             <div className="lg:col-span-3">
-              <div className="bg-[#1a2a45] border border-[#243355] rounded-2xl p-6 sm:p-8">
-                <p className="text-[#C9A96E] text-xs font-sans uppercase tracking-widest font-semibold mb-1">
-                  Request a Visit
-                </p>
-                <h2 className="font-serif text-2xl font-bold text-[#FAFAFA] mb-6">
-                  Send Us a Message
-                </h2>
-
-                <form className="space-y-5">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                      <label
-                        className="block text-xs font-semibold uppercase tracking-wide text-[#94a3b8] mb-1.5 font-sans"
-                        htmlFor="name"
-                      >
-                        Full Name <span className="text-[#C9A96E]">*</span>
-                      </label>
-                      <input
-                        id="name"
-                        name="name"
-                        type="text"
-                        required
-                        placeholder="Your full name"
-                        className="w-full px-4 py-3 rounded-xl border border-[#243355] bg-[#0f1a2e] text-[#FAFAFA] placeholder-[#94a3b8]/60 focus:outline-none focus:ring-2 focus:ring-[#C9A96E]/50 focus:border-[#C9A96E]/50 text-sm font-sans transition-colors"
-                      />
-                    </div>
-                    <div>
-                      <label
-                        className="block text-xs font-semibold uppercase tracking-wide text-[#94a3b8] mb-1.5 font-sans"
-                        htmlFor="phone"
-                      >
-                        Phone Number <span className="text-[#C9A96E]">*</span>
-                      </label>
-                      <input
-                        id="phone"
-                        name="phone"
-                        type="tel"
-                        required
-                        placeholder="+91 XXXXX XXXXX"
-                        className="w-full px-4 py-3 rounded-xl border border-[#243355] bg-[#0f1a2e] text-[#FAFAFA] placeholder-[#94a3b8]/60 focus:outline-none focus:ring-2 focus:ring-[#C9A96E]/50 focus:border-[#C9A96E]/50 text-sm font-sans transition-colors"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label
-                      className="block text-xs font-semibold uppercase tracking-wide text-[#94a3b8] mb-1.5 font-sans"
-                      htmlFor="email"
-                    >
-                      Email Address
-                    </label>
-                    <input
-                      id="email"
-                      name="email"
-                      type="email"
-                      placeholder="your@email.com"
-                      className="w-full px-4 py-3 rounded-xl border border-[#243355] bg-[#0f1a2e] text-[#FAFAFA] placeholder-[#94a3b8]/60 focus:outline-none focus:ring-2 focus:ring-[#C9A96E]/50 focus:border-[#C9A96E]/50 text-sm font-sans transition-colors"
-                    />
-                  </div>
-
-                  <div>
-                    <label
-                      className="block text-xs font-semibold uppercase tracking-wide text-[#94a3b8] mb-1.5 font-sans"
-                      htmlFor="condition"
-                    >
-                      Area of Concern <span className="text-[#C9A96E]">*</span>
-                    </label>
-                    <select
-                      id="condition"
-                      name="condition"
-                      required
-                      className="w-full px-4 py-3 rounded-xl border border-[#243355] bg-[#0f1a2e] text-[#FAFAFA] focus:outline-none focus:ring-2 focus:ring-[#C9A96E]/50 focus:border-[#C9A96E]/50 text-sm font-sans transition-colors"
-                    >
-                      <option value="">Select a category</option>
-                      {conditionOptions.map((opt) => (
-                        <option key={opt} value={opt}>
-                          {opt}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-
-                  <div>
-                    <label
-                      className="block text-xs font-semibold uppercase tracking-wide text-[#94a3b8] mb-1.5 font-sans"
-                      htmlFor="message"
-                    >
-                      Describe Your Concern
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={4}
-                      placeholder="Brief description of your symptoms or question..."
-                      className="w-full px-4 py-3 rounded-xl border border-[#243355] bg-[#0f1a2e] text-[#FAFAFA] placeholder-[#94a3b8]/60 focus:outline-none focus:ring-2 focus:ring-[#C9A96E]/50 focus:border-[#C9A96E]/50 text-sm font-sans resize-none transition-colors"
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full py-3.5 rounded-full bg-[#C9A96E] text-[#0f1a2e] font-semibold text-sm hover:bg-[#D4B483] hover:shadow-lg hover:shadow-[#C9A96E]/20 transition-all duration-200 font-sans tracking-wide"
-                  >
-                    Submit Consultation Request
-                  </button>
-                </form>
-              </div>
+              <ContactForm />
             </div>
 
             {/* Unified Info Panel */}
