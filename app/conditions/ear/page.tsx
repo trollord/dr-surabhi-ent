@@ -273,6 +273,10 @@ export default function EarPage() {
               Advanced otologic procedures for hearing restoration and ear health. Each intervention is
               tailored to the patient&apos;s specific condition, age, and overall health status.
             </p>
+            <p className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-[#C9A96E] bg-[#C9A96E]/10 border border-[#C9A96E]/20 px-4 py-2 rounded-full">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              Most surgeries are day care procedures — go home the same day
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

@@ -43,11 +43,11 @@ export default function ContactPage() {
             </a>
             <span className="hidden sm:block w-px h-4 bg-[#243355]" />
             <a
-              href="mailto:dr.surabhi@drsurabhinikam.com"
+              href="mailto:nikam.surabhi@gmail.com"
               className="flex items-center gap-2.5 text-sm font-sans text-[#FAFAFA] hover:text-[#C9A96E] transition-colors"
             >
               <Mail size={15} className="text-[#C9A96E]" />
-              dr.surabhi@drsurabhinikam.com
+              nikam.surabhi@gmail.com
             </a>
             <span className="hidden sm:block w-px h-4 bg-[#243355]" />
             <a
@@ -124,10 +124,10 @@ export default function ContactPage() {
                     <div>
                       <p className="text-xs font-semibold uppercase tracking-wide text-[#C9A96E] mb-0.5 font-sans">Email</p>
                       <a
-                        href="mailto:dr.surabhi@drsurabhinikam.com"
+                        href="mailto:nikam.surabhi@gmail.com"
                         className="text-sm text-[#FAFAFA] hover:text-[#C9A96E] transition-colors font-sans break-all"
                       >
-                        dr.surabhi@drsurabhinikam.com
+                        nikam.surabhi@gmail.com
                       </a>
                     </div>
                   </div>
@@ -138,8 +138,8 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="text-xs font-semibold uppercase tracking-wide text-[#C9A96E] mb-0.5 font-sans">Clinic Hours</p>
-                      <p className="text-sm text-[#FAFAFA] font-sans">Mon – Sat: 10 AM – 7 PM</p>
-                      <p className="text-xs text-[#94a3b8] font-sans mt-0.5">Sunday: By appointment only</p>
+                      <p className="text-sm text-[#FAFAFA] font-sans">Tue – Sat: 5 PM – 8 PM</p>
+                      <p className="text-xs text-[#94a3b8] font-sans mt-0.5">Sunday: 11 AM – 1 PM</p>
                     </div>
                   </div>
                 </div>

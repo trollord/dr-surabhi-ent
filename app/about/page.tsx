@@ -134,11 +134,19 @@ export default function AboutPage() {
                   deeply human touch to every consultation.
                 </p>
                 <p>
-                  Having trained at some of the city&apos;s most premium institutes and worked alongside
-                  top-notch, world-renowned surgeons, she believes that learning from the best translates
-                  into offering the best care. Her approach blends clinical excellence with the latest
-                  technology to ensure accurate diagnosis, minimally invasive treatments, and faster
-                  recovery.
+                  She has had the privilege of training under some of the world&apos;s most renowned skull
+                  base surgeons — including <span className="text-[#FAFAFA] font-medium">Dr. Narayan Jayashankar</span>,{" "}
+                  <span className="text-[#FAFAFA] font-medium">Dr. Nishit Shah</span>, and{" "}
+                  <span className="text-[#FAFAFA] font-medium">Dr. Prathamesh Pai</span> — among others.
+                  She believes that learning from the best translates directly into offering the best care
+                  to every patient who walks through her door.
+                </p>
+                <p>
+                  Her clinical training spans some of Mumbai&apos;s most prestigious medical institutions —
+                  Seth A.J.B. ENT Hospital (Fort), Nanavati Max Super Specialty Hospital (Vile Parle),
+                  P.D. Hinduja Research Centre and Hospital (Khar), and Lilavati Hospital and Research
+                  Centre (Bandra). This breadth of exposure has shaped her into a well-rounded clinician
+                  with expertise across the full spectrum of ENT and skull base care.
                 </p>
                 <p>
                   Dr. Surabhi is known for being approachable and empathetic. She takes time to listen,
