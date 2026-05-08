@@ -14,26 +14,29 @@ const qualifications = [
   {
     year: "Step 1",
     degree: "MBBS",
+    institute: "Rajiv Gandhi Government Medical College & Chhatrapati Shivaji Maharaj Hospital, Kalva, Thane",
     detail: "Bachelor of Medicine & Bachelor of Surgery — Foundation in clinical medicine",
     icon: GraduationCap,
   },
   {
     year: "Step 2",
     degree: "MS (ENT)",
+    institute: "Indira Gandhi Government Medical College & Mayo Hospital, Nagpur",
     detail: "Master of Surgery in Ear, Nose & Throat — Postgraduate surgical specialization",
     icon: Stethoscope,
   },
   {
     year: "Step 3",
-    degree: "Allergy Specialist Certification",
+    degree: "Allergenius — Allergy Specialist Certification",
+    institute: "Society of ORL Surgeons, Adesh University",
     detail: "Certified training in allergy testing, diagnosis, and immunotherapy (SCIT & SLIT)",
     icon: FlaskConical,
   },
   {
     year: "Step 4",
     degree: "Fellowship — Skull Base Surgery",
-    detail:
-      "Advanced fellowship in endoscopic skull base surgery, sinonasal tumours & pituitary procedures",
+    institute: "Under Dr. Narayan Jayashankar — World-renowned Skull Base Surgeon",
+    detail: "Advanced fellowship in endoscopic skull base surgery, sinonasal tumours & pituitary procedures",
     icon: Microscope,
   },
 ];
@@ -180,7 +183,7 @@ export default function AboutPage() {
           </div>
 
           <div className="relative pl-5 sm:pl-8 border-l-2 border-[#243355] space-y-6 sm:space-y-8">
-            {qualifications.map(({ year, degree, detail, icon: Icon }) => (
+            {qualifications.map(({ year, degree, institute, detail, icon: Icon }) => (
               <div key={degree} className="relative">
                 <div className="absolute -left-[2.35rem] w-9 h-9 rounded-full bg-[#0f1a2e] flex items-center justify-center">
                   <Icon size={16} className="text-white" />
@@ -189,7 +192,8 @@ export default function AboutPage() {
                   <span className="inline-block text-xs font-bold text-[#C9A96E] uppercase tracking-widest mb-1">
                     {year}
                   </span>
-                  <h3 className="font-serif text-lg font-bold text-[#FAFAFA] mb-1">{degree}</h3>
+                  <h3 className="font-serif text-lg font-bold text-[#FAFAFA] mb-0.5">{degree}</h3>
+                  <p className="text-xs font-medium text-[#C9A96E]/80 mb-1.5">{institute}</p>
                   <p className="text-sm text-[#94a3b8]">{detail}</p>
                 </div>
               </div>
