@@ -96,9 +96,9 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="text-xs font-semibold uppercase tracking-wide text-[#C9A96E] mb-0.5 font-sans">Address</p>
-                      <p className="text-sm text-[#FAFAFA] font-sans leading-relaxed">
+                      <a href="https://maps.google.com/?q=G4+Akansha+CHS+Navpada+Thane+Maharashtra" target="_blank" rel="noopener noreferrer" className="text-sm text-[#FAFAFA] hover:text-[#C9A96E] transition-colors font-sans leading-relaxed">
                         G4 Akansha C.H.S, Navpada,<br />Thane, Maharashtra
-                      </p>
+                      </a>
                     </div>
                   </div>
 
