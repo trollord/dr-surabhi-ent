@@ -160,7 +160,7 @@ export default function ThroatVoicePage() {
                       <p className="text-sm text-[#FAFAFA] leading-relaxed">{c.treatment}</p>
                     </div>
                   </div>
-                  <div className="md:w-1/2 relative min-h-[260px] md:min-h-[420px]">
+                  <div className="md:w-1/2 relative min-h-[200px] md:min-h-[320px]">
                     <Image
                       src={c.image}
                       alt={c.name}
@@ -214,7 +214,7 @@ export default function ThroatVoicePage() {
                       </ul>
                     </div>
                   </div>
-                  <div className="md:w-1/2 relative min-h-[260px] md:min-h-[420px]">
+                  <div className="md:w-1/2 relative min-h-[200px] md:min-h-[320px]">
                     <Image
                       src={surgery.image}
                       alt={surgery.name}
