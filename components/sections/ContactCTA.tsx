@@ -57,8 +57,8 @@ export default function ContactCTA() {
             </div>
             <div>
               <p className="text-xs text-[#C9A96E] uppercase font-semibold mb-1">Phone</p>
-              <a href="tel:+919969561969" className="text-white text-sm hover:text-[#C9A96E] transition-colors">
-                +91 99695 61969
+              <a href="tel:+919769783391" className="text-white text-sm hover:text-[#C9A96E] transition-colors">
+                +91 97697 83391
               </a>
             </div>
           </div>

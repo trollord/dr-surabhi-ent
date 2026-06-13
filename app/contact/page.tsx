@@ -35,7 +35,7 @@ const sidebarCards: ContactItem[] = [
 ];
 
 const compactContacts: { icon: LucideIcon; text: string; href: string }[] = [
-  { icon: Phone, text: "+91 99695 61969", href: "tel:+919969561969" },
+  { icon: Phone, text: "+91 97697 83391", href: "tel:+919769783391" },
   { icon: Mail, text: "nikam.surabhi@gmail.com", href: "mailto:nikam.surabhi@gmail.com" },
 ];
 
