@@ -2,7 +2,7 @@ export default function WhatsAppButton() {
   const message = encodeURIComponent(
     "Hi Dr. Surabhi, I'd like to book a consultation."
   );
-  const whatsappUrl = `https://wa.me/919969561969?text=${message}`;
+  const whatsappUrl = `https://wa.me/919769783391?text=${message}`;
 
   return (
     <a

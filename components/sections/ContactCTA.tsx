@@ -28,7 +28,7 @@ export default function ContactCTA() {
               Book Consultation
             </Link>
             <a
-              href={`https://wa.me/919969561969?text=${whatsappMsg}`}
+              href={`https://wa.me/919769783391?text=${whatsappMsg}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full border-2 border-white text-white font-semibold text-base hover:bg-[#1a2a45] hover:text-[#C9A96E] transition-colors"
