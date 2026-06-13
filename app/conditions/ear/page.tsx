@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
+import { Ear } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Ear Conditions, Hearing Loss & Ear Surgery Mumbai | Dr. Surabhi Nikam Mirajkar",
@@ -11,6 +13,7 @@ export const metadata: Metadata = {
 const conditions = [
   {
     name: "Hearing Loss",
+    image: "/images/conditions/ear/hearing-loss.webp",
     description:
       "Hearing loss can be conductive, sensorineural, or mixed. Early evaluation and audiometry testing is key to determining the right treatment path.",
     symptoms: ["Difficulty hearing conversations", "Asking others to repeat themselves", "Muffled sounds", "Ringing in the ears"],
@@ -18,6 +21,7 @@ const conditions = [
   },
   {
     name: "Ear Infections (Otitis Media & Externa)",
+    image: "/images/conditions/ear/ear-infection.webp",
     description:
       "Ear infections are among the most common ENT presentations. Both middle ear (otitis media) and outer ear (swimmer's ear / otitis externa) are treated.",
     symptoms: ["Ear pain", "Discharge from ear", "Reduced hearing", "Fever (in children)", "Fullness in ear"],
@@ -25,6 +29,7 @@ const conditions = [
   },
   {
     name: "Tinnitus (Ringing in Ears)",
+    image: "/images/conditions/ear/tinnitus.webp",
     description:
       "Tinnitus is the perception of sound (ringing, buzzing, hissing) without an external source. Can be caused by noise exposure, wax buildup, or hearing loss.",
     symptoms: ["Ringing, buzzing or hissing sounds", "Affects one or both ears", "Worse in quiet environments", "Associated hearing loss"],
@@ -32,6 +37,7 @@ const conditions = [
   },
   {
     name: "Vertigo & Balance Disorders",
+    image: "/images/conditions/ear/vertigo.webp",
     description:
       "Vertigo presents as a sensation of spinning and is often caused by inner ear conditions like BPPV, labyrinthitis, or Meniere's disease.",
     symptoms: ["Spinning sensation", "Nausea and vomiting", "Balance problems", "Involuntary eye movements (nystagmus)"],
@@ -39,6 +45,7 @@ const conditions = [
   },
   {
     name: "Eardrum Perforation",
+    image: "/images/conditions/ear/eardrum-perforation.webp",
     description:
       "A hole or tear in the eardrum (tympanic membrane) caused by infection, trauma, or pressure changes. Can affect hearing and increase risk of infections.",
     symptoms: ["Sudden sharp ear pain", "Hearing loss", "Ear discharge", "Ringing in the ear"],
@@ -46,6 +53,7 @@ const conditions = [
   },
   {
     name: "Earwax Impaction",
+    image: "/images/conditions/ear/earwax.webp",
     description:
       "Excess earwax buildup can cause hearing loss, pain, and tinnitus. Safe removal by an ENT is the recommended approach — avoid cotton buds.",
     symptoms: ["Blocked sensation in ear", "Reduced hearing", "Earache", "Dizziness"],
@@ -56,6 +64,7 @@ const conditions = [
 const earSurgeries = [
   {
     name: "Myringotomy & Tympanostomy Tube Insertion",
+    image: "/images/conditions/ear/myringotomy.webp",
     description:
       "Myringotomy is a surgical procedure involving a small incision in the eardrum to relieve pressure from excessive fluid buildup, typically resulting from chronic otitis media. Tympanostomy tubes (grommets) are often inserted to allow air circulation in the middle ear, particularly in children with recurrent ear infections.",
     details: [
@@ -67,6 +76,7 @@ const earSurgeries = [
   },
   {
     name: "Tympanoplasty",
+    image: "/images/conditions/ear/tympanoplasty.webp",
     description:
       "Tympanoplasty is performed to repair a perforated eardrum or address middle ear issues. The surgeon makes an incision in the ear canal, lifts the ear canal skin, and grafts tissue onto the perforation to create a seal that promotes healing and prevents recurrent infections.",
     details: [
@@ -78,6 +88,7 @@ const earSurgeries = [
   },
   {
     name: "Mastoidectomy",
+    image: "/images/conditions/ear/mastoidectomy.webp",
     description:
       "Mastoidectomy involves the surgical removal of infected or diseased cells from the mastoid bone located behind the ear. This procedure prevents infection from spreading to the skull and is typically performed for chronic mastoid infections that do not respond to conservative treatment.",
     details: [
@@ -89,6 +100,7 @@ const earSurgeries = [
   },
   {
     name: "Stapedectomy",
+    image: "/images/conditions/ear/stapedectomy.webp",
     description:
       "Stapedectomy treats otosclerosis — a condition where abnormal bone growth prevents the stapes (a tiny bone in the middle ear) from transmitting sound to the inner ear. The procedure involves removing and replacing the stapes with a prosthetic device to restore sound transmission and improve hearing.",
     details: [
@@ -138,7 +150,7 @@ export default function EarPage() {
             <span className="mx-2">/</span>
             <span className="text-white">Ear &amp; Hearing</span>
           </nav>
-          <div className="text-6xl mb-4" aria-hidden="true">👂</div>
+          
           <h1 className="font-serif text-4xl sm:text-5xl font-bold text-white mb-4">
             Ear &amp; Hearing
           </h1>
@@ -151,38 +163,51 @@ export default function EarPage() {
 
       {/* Conditions */}
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-serif text-3xl font-bold text-[#FAFAFA]">
               Ear Conditions We Treat
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {conditions.map((c) => (
+          <div className="space-y-8">
+            {conditions.map((c, idx) => (
               <article
                 key={c.name}
-                className="bg-[#1a2a45] border border-[#243355] rounded-xl shadow-sm p-6 card-hover"
+                className="bg-[#1a2a45] border border-[#243355] rounded-2xl overflow-hidden card-hover"
               >
-                <h3 className="font-serif text-xl font-bold text-[#FAFAFA] mb-2">{c.name}</h3>
-                <p className="text-sm text-[#94a3b8] leading-relaxed mb-4">{c.description}</p>
-                <div className="mb-4">
-                  <p className="text-xs font-semibold uppercase tracking-widest text-[#C9A96E] mb-2">
-                    Common Symptoms
-                  </p>
-                  <ul className="space-y-1">
-                    {c.symptoms.map((s) => (
-                      <li key={s} className="flex items-start gap-2 text-sm text-[#FAFAFA]">
-                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#C9A96E] shrink-0" />
-                        {s}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="bg-[#0f1a2e] rounded-lg p-3">
-                  <p className="text-xs font-semibold uppercase tracking-widest text-[#C9A96E] mb-1">
-                    Treatment Approach
-                  </p>
-                  <p className="text-sm text-[#FAFAFA]">{c.treatment}</p>
+                <div className={`flex flex-col ${idx % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"}`}>
+                  <div className="md:w-1/2 p-7 md:p-9">
+                    <h3 className="font-serif text-2xl font-bold text-[#FAFAFA] mb-3">{c.name}</h3>
+                    <p className="text-sm text-[#94a3b8] leading-relaxed mb-5">{c.description}</p>
+                    <div className="mb-5">
+                      <p className="text-xs font-semibold uppercase tracking-widest text-[#C9A96E] mb-2">
+                        Common Symptoms
+                      </p>
+                      <ul className="space-y-1.5">
+                        {c.symptoms.map((s) => (
+                          <li key={s} className="flex items-start gap-2 text-sm text-[#FAFAFA]">
+                            <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#C9A96E] shrink-0" />
+                            {s}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className="bg-[#0f1a2e] rounded-lg p-4 border border-[#243355]">
+                      <p className="text-xs font-semibold uppercase tracking-widest text-[#C9A96E] mb-1">
+                        Treatment Approach
+                      </p>
+                      <p className="text-sm text-[#FAFAFA] leading-relaxed">{c.treatment}</p>
+                    </div>
+                  </div>
+                  <div className="md:w-1/2 relative min-h-[260px] md:min-h-[420px]">
+                    <Image
+                      src={c.image}
+                      alt={c.name}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  </div>
                 </div>
               </article>
             ))}
@@ -261,7 +286,7 @@ export default function EarPage() {
 
       {/* Ear Surgery Procedures */}
       <section className="py-20 bg-[#0f1a2e]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-sm font-semibold uppercase tracking-widest text-[#C9A96E] mb-2">
               Surgical Interventions
@@ -279,32 +304,45 @@ export default function EarPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {earSurgeries.map((surgery) => (
-              <div
+          <div className="space-y-8">
+            {earSurgeries.map((surgery, idx) => (
+              <article
                 key={surgery.name}
-                className="bg-[#1a2a45] border border-[#243355] rounded-xl p-6 hover:border-[#C9A96E]/40 transition-colors"
+                className="bg-[#1a2a45] border border-[#243355] rounded-2xl overflow-hidden hover:border-[#C9A96E]/40 transition-colors"
               >
-                <h3 className="font-serif text-xl font-bold text-[#FAFAFA] mb-3">{surgery.name}</h3>
-                <p className="text-sm text-[#94a3b8] leading-relaxed mb-4">{surgery.description}</p>
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-widest text-[#C9A96E] mb-2">
-                    Key Details
-                  </p>
-                  <ul className="space-y-1.5">
-                    {surgery.details.map((d) => (
-                      <li key={d} className="flex items-start gap-2 text-sm text-[#FAFAFA]">
-                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#C9A96E] shrink-0" />
-                        {d}
-                      </li>
-                    ))}
-                  </ul>
+                <div className={`flex flex-col ${idx % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"}`}>
+                  <div className="md:w-1/2 p-7 md:p-9">
+                    <h3 className="font-serif text-2xl font-bold text-[#FAFAFA] mb-3">{surgery.name}</h3>
+                    <p className="text-sm text-[#94a3b8] leading-relaxed mb-5">{surgery.description}</p>
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-widest text-[#C9A96E] mb-2">
+                        Key Details
+                      </p>
+                      <ul className="space-y-1.5">
+                        {surgery.details.map((d) => (
+                          <li key={d} className="flex items-start gap-2 text-sm text-[#FAFAFA]">
+                            <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#C9A96E] shrink-0" />
+                            {d}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="md:w-1/2 relative min-h-[260px] md:min-h-[420px]">
+                    <Image
+                      src={surgery.image}
+                      alt={surgery.name}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  </div>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
 
-          <p className="text-center text-sm text-[#94a3b8] mt-8 max-w-2xl mx-auto">
+          <p className="text-center text-sm text-[#94a3b8] mt-10 max-w-2xl mx-auto">
             Most ear surgeries are outpatient procedures, allowing patients to return home the same day.
             Proper post-operative care is essential for optimal recovery.
           </p>

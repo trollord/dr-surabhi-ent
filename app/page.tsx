@@ -5,7 +5,6 @@ import ConditionsGrid from "@/components/sections/ConditionsGrid";
 import Stats from "@/components/sections/Stats";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import Testimonials from "@/components/sections/Testimonials";
-import BlogPreview from "@/components/sections/BlogPreview";
 import ContactCTA from "@/components/sections/ContactCTA";
 
 export const metadata: Metadata = {
@@ -25,7 +24,6 @@ export default function HomePage() {
       <Stats />
       <WhyChooseUs />
       <Testimonials />
-      <BlogPreview />
       <ContactCTA />
     </>
   );

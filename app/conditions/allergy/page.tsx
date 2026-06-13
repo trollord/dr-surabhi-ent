@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
-import { Award } from "lucide-react";
+import { Award, Leaf } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Allergy Specialist Mumbai | Allergic Rhinitis & Immunotherapy | Dr. Surabhi",
@@ -11,36 +12,42 @@ export const metadata: Metadata = {
 const conditions = [
   {
     name: "Allergic Rhinitis (Hay Fever)",
+    image: "/images/conditions/allergy/allergic-rhinitis.webp",
     description: "One of the most common allergy conditions, affecting millions in India. Triggered by pollen, dust, mold, or pet dander.",
     points: ["Sneezing", "Runny itchy nose", "Nasal congestion", "Watery itchy eyes", "Postnasal drip"],
     treatment: "Antihistamines, nasal corticosteroids, allergen avoidance, and long-term immunotherapy for lasting relief.",
   },
   {
     name: "Dust, Pollen & Environmental Allergies",
+    image: "/images/conditions/allergy/dust-pollen.webp",
     description: "Allergic reactions to house dust mites, pollen, mold spores, cockroach droppings, and pet dander are the most common inhalant allergens in Mumbai.",
     points: ["Chronic sneezing", "Nasal blockage", "Itchy eyes and throat", "Worsening symptoms indoors or seasonally"],
     treatment: "Environmental control measures, pharmacotherapy, and allergen-specific immunotherapy (SCIT or SLIT).",
   },
   {
     name: "Food Allergy Evaluation",
+    image: "/images/conditions/allergy/food-allergy.webp",
     description: "Food allergies can manifest as nasal symptoms, hives, or systemic reactions. Proper testing helps identify culprits and guide management.",
     points: ["Itching in mouth or throat after eating", "Skin reactions", "Nasal congestion after specific foods", "Digestive symptoms"],
     treatment: "Allergy skin prick testing or serum IgE tests, dietary modifications, and emergency epinephrine if indicated.",
   },
   {
     name: "Skin Prick Testing (Allergy Testing)",
+    image: "/images/conditions/allergy/skin-prick-test.webp",
     description: "A safe, reliable, and evidence-based method to identify specific allergens. Results available within 20 minutes.",
     points: ["Identification of specific triggers", "Guides targeted treatment", "Panel of common Indian allergens tested"],
     treatment: "In-clinic procedure using a panel of common Indian allergens. Safe and well-tolerated by adults and children.",
   },
   {
-    name: "Immunotherapy - SCIT & SLIT",
+    name: "Immunotherapy — SCIT & SLIT",
+    image: "/images/conditions/allergy/immunotherapy.webp",
     description: "The only treatment that modifies the immune response and provides long-term allergy relief. Available as subcutaneous injections (SCIT) or sublingual drops/tablets (SLIT).",
     points: ["Suitable for moderate-to-severe allergic rhinitis", "Useful when multiple allergens are involved", "When medications provide inadequate control"],
     treatment: "3-5 year programme with gradually increasing allergen doses. Significantly reduces symptoms and medication dependence.",
   },
   {
     name: "Allergy-Related Chronic Sinusitis",
+    image: "/images/conditions/allergy/allergy-sinusitis.webp",
     description: "Untreated allergies are a major driver of chronic sinusitis. Addressing the underlying allergy is key to preventing recurrent sinus infections.",
     points: ["Chronic nasal congestion", "Recurrent sinus infections", "Post-nasal drip", "Loss of smell"],
     treatment: "Combined approach: allergy treatment plus sinus management including nasal steroids, saline rinses, and FESS if needed.",
@@ -76,7 +83,7 @@ export default function AllergyPage() {
             <span className="mx-2">/</span>
             <span className="text-white">Allergy</span>
           </nav>
-          <div className="text-6xl mb-4">🌿</div>
+          
           <h1 className="font-serif text-4xl sm:text-5xl font-bold text-white mb-4">Allergy &amp; Immunotherapy</h1>
           <p className="text-[#94a3b8] text-lg max-w-2xl mb-6">
             As a certified Allergy Specialist, Dr. Surabhi offers comprehensive allergy testing and evidence-based immunotherapy in Mumbai.
@@ -89,24 +96,40 @@ export default function AllergyPage() {
       </section>
 
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-serif text-3xl font-bold text-[#FAFAFA] text-center mb-12">Allergy Conditions We Treat</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {conditions.map((c) => (
-              <article key={c.name} className="bg-[#1a2a45] border border-[#243355] rounded-xl shadow-sm p-6 card-hover">
-                <h3 className="font-serif text-xl font-bold text-[#FAFAFA] mb-2">{c.name}</h3>
-                <p className="text-sm text-[#94a3b8] leading-relaxed mb-4">{c.description}</p>
-                <ul className="space-y-1 mb-4">
-                  {c.points.map((s) => (
-                    <li key={s} className="flex items-start gap-2 text-sm text-[#FAFAFA]">
-                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#C9A96E] shrink-0" />
-                      {s}
-                    </li>
-                  ))}
-                </ul>
-                <div className="bg-[#1a2a45] rounded-lg p-3 border border-[#243355]">
-                  <p className="text-xs font-semibold uppercase tracking-widest text-[#C9A96E] mb-1">Treatment</p>
-                  <p className="text-sm text-[#FAFAFA]">{c.treatment}</p>
+          <div className="space-y-8">
+            {conditions.map((c, idx) => (
+              <article
+                key={c.name}
+                className="bg-[#1a2a45] border border-[#243355] rounded-2xl overflow-hidden card-hover"
+              >
+                <div className={`flex flex-col ${idx % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"}`}>
+                  <div className="md:w-1/2 p-7 md:p-9">
+                    <h3 className="font-serif text-2xl font-bold text-[#FAFAFA] mb-3">{c.name}</h3>
+                    <p className="text-sm text-[#94a3b8] leading-relaxed mb-5">{c.description}</p>
+                    <ul className="space-y-1.5 mb-5">
+                      {c.points.map((s) => (
+                        <li key={s} className="flex items-start gap-2 text-sm text-[#FAFAFA]">
+                          <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#C9A96E] shrink-0" />
+                          {s}
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="bg-[#0f1a2e] rounded-lg p-4 border border-[#243355]">
+                      <p className="text-xs font-semibold uppercase tracking-widest text-[#C9A96E] mb-1">Treatment</p>
+                      <p className="text-sm text-[#FAFAFA] leading-relaxed">{c.treatment}</p>
+                    </div>
+                  </div>
+                  <div className="md:w-1/2 relative min-h-[260px] md:min-h-[420px]">
+                    <Image
+                      src={c.image}
+                      alt={c.name}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  </div>
                 </div>
               </article>
             ))}
@@ -119,10 +142,10 @@ export default function AllergyPage() {
           <h2 className="font-serif text-3xl font-bold text-[#FAFAFA] text-center mb-10">FAQs</h2>
           <div className="space-y-4">
             {faqs.map((faq) => (
-              <details key={faq.q} className="group bg-[#1a2a45] border border-[#243355] rounded-xl overflow-hidden">
+              <details key={faq.q} className="group bg-[#0f1a2e] border border-[#243355] rounded-xl overflow-hidden">
                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer font-medium text-[#FAFAFA] hover:text-[#C9A96E] list-none">
                   {faq.q}
-                  <span className="ml-4 text-[#0f1a2e] text-xl group-open:rotate-45 transition-transform inline-block">+</span>
+                  <span className="ml-4 text-[#C9A96E] text-xl group-open:rotate-45 transition-transform inline-block">+</span>
                 </summary>
                 <div className="px-5 pb-4 text-sm text-[#94a3b8] leading-relaxed border-t border-[#243355] pt-3">{faq.a}</div>
               </details>

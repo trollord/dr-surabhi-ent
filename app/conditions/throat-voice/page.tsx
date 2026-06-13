@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
+import { Mic } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Throat & Voice Treatment Mumbai | Tonsillitis, Snoring, Sleep Apnea | Dr. Surabhi",
@@ -11,6 +13,7 @@ export const metadata: Metadata = {
 const conditions = [
   {
     name: "Tonsillitis & Adenoid Problems",
+    image: "/images/conditions/throat/tonsillitis.webp",
     description:
       "Inflammation of the tonsils (tonsillitis) or adenoids is common in children and adults. Recurrent infections or obstruction may require surgical removal.",
     symptoms: ["Severe sore throat", "Difficulty swallowing", "Swollen neck glands", "Fever", "Snoring in children"],
@@ -18,6 +21,7 @@ const conditions = [
   },
   {
     name: "Voice Disorders & Hoarseness",
+    image: "/images/conditions/throat/voice-disorders.webp",
     description:
       "Voice changes, hoarseness, or voice loss can result from vocal cord nodules, polyps, laryngitis, or overuse. A laryngoscopy provides direct visualization.",
     symptoms: ["Hoarse or rough voice", "Voice fatigue", "Difficulty projecting voice", "Voice loss", "Throat clearing"],
@@ -25,6 +29,7 @@ const conditions = [
   },
   {
     name: "Snoring & Sleep Apnea",
+    image: "/images/conditions/throat/snoring.webp",
     description:
       "Snoring and obstructive sleep apnea (OSA) can significantly impact quality of life and health. ENT evaluation identifies the site of obstruction.",
     symptoms: ["Loud snoring", "Gasping during sleep", "Excessive daytime sleepiness", "Morning headaches", "Poor concentration"],
@@ -32,6 +37,7 @@ const conditions = [
   },
   {
     name: "Throat Infections",
+    image: "/images/conditions/throat/throat-infections.webp",
     description:
       "Bacterial and viral throat infections (pharyngitis, laryngitis) are very common. Proper diagnosis avoids unnecessary antibiotic use.",
     symptoms: ["Sore throat", "Pain on swallowing", "Redness in throat", "Fever", "Hoarseness"],
@@ -39,10 +45,38 @@ const conditions = [
   },
   {
     name: "Difficulty Swallowing (Dysphagia)",
+    image: "/images/conditions/throat/dysphagia.webp",
     description:
       "Swallowing difficulty can arise from structural, neurological, or muscular causes. A thorough ENT assessment including flexible laryngoscopy is important.",
     symptoms: ["Food or liquid getting stuck", "Coughing or choking while eating", "Regurgitation", "Drooling", "Weight loss"],
     treatment: "Depends on the cause — may include dietary modifications, swallowing therapy, medications, or endoscopic procedures.",
+  },
+];
+
+const surgeries = [
+  {
+    name: "Tonsillectomy & Adenoidectomy",
+    image: "/images/conditions/throat/tonsillectomy.webp",
+    description:
+      "Tonsillectomy involves the removal of the tonsils — lymphoid tissues at the back of the throat. It is commonly recommended for patients with recurrent tonsillitis, sleep apnea, or obstructive sleep disorders. Adenoidectomy removes adenoid tissue located behind the nose and is often performed alongside tonsillectomy. Both are among the most frequently performed ENT surgeries, especially in children with chronic inflammation or recurrent infections.",
+    details: [
+      "Performed under general anaesthesia",
+      "Procedure typically takes approximately 30 minutes",
+      "Same-day discharge possible in most cases",
+      "Highly effective for recurrent tonsillitis and obstructive sleep apnea",
+    ],
+  },
+  {
+    name: "Tracheostomy",
+    image: "/images/conditions/throat/tracheostomy.webp",
+    description:
+      "Tracheostomy creates an alternative airway in the throat for patients experiencing difficulty breathing. A small opening is made in the front of the neck into the trachea (windpipe), through which a tube is placed to allow air to reach the lungs directly. This procedure may be temporary or permanent, depending on the underlying condition requiring intervention.",
+    details: [
+      "Provides a secure, direct airway when normal breathing is compromised",
+      "Can be temporary (short-term) or permanent depending on the condition",
+      "Performed under general anaesthesia in a hospital setting",
+      "Comprehensive post-operative care and guidance provided",
+    ],
   },
 ];
 
@@ -76,7 +110,7 @@ export default function ThroatVoicePage() {
             <span className="mx-2">/</span>
             <span className="text-white">Throat &amp; Voice</span>
           </nav>
-          <div className="text-6xl mb-4" aria-hidden="true">🗣️</div>
+         
           <h1 className="font-serif text-4xl sm:text-5xl font-bold text-white mb-4">
             Throat &amp; Voice
           </h1>
@@ -90,38 +124,51 @@ export default function ThroatVoicePage() {
 
       {/* Conditions */}
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-serif text-3xl font-bold text-[#FAFAFA]">
               Throat &amp; Voice Conditions We Treat
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {conditions.map((c) => (
+          <div className="space-y-8">
+            {conditions.map((c, idx) => (
               <article
                 key={c.name}
-                className="bg-[#1a2a45] border border-[#243355] rounded-xl shadow-sm p-6 card-hover"
+                className="bg-[#1a2a45] border border-[#243355] rounded-2xl overflow-hidden card-hover"
               >
-                <h3 className="font-serif text-xl font-bold text-[#FAFAFA] mb-2">{c.name}</h3>
-                <p className="text-sm text-[#94a3b8] leading-relaxed mb-4">{c.description}</p>
-                <div className="mb-4">
-                  <p className="text-xs font-semibold uppercase tracking-widest text-[#C9A96E] mb-2">
-                    Common Symptoms
-                  </p>
-                  <ul className="space-y-1">
-                    {c.symptoms.map((s) => (
-                      <li key={s} className="flex items-start gap-2 text-sm text-[#FAFAFA]">
-                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#0f1a2e] shrink-0" />
-                        {s}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="bg-[#0f1a2e] rounded-lg p-3">
-                  <p className="text-xs font-semibold uppercase tracking-widest text-[#0f1a2e] mb-1">
-                    Treatment Approach
-                  </p>
-                  <p className="text-sm text-[#FAFAFA]">{c.treatment}</p>
+                <div className={`flex flex-col ${idx % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"}`}>
+                  <div className="md:w-1/2 p-7 md:p-9">
+                    <h3 className="font-serif text-2xl font-bold text-[#FAFAFA] mb-3">{c.name}</h3>
+                    <p className="text-sm text-[#94a3b8] leading-relaxed mb-5">{c.description}</p>
+                    <div className="mb-5">
+                      <p className="text-xs font-semibold uppercase tracking-widest text-[#C9A96E] mb-2">
+                        Common Symptoms
+                      </p>
+                      <ul className="space-y-1.5">
+                        {c.symptoms.map((s) => (
+                          <li key={s} className="flex items-start gap-2 text-sm text-[#FAFAFA]">
+                            <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#C9A96E] shrink-0" />
+                            {s}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className="bg-[#0f1a2e] rounded-lg p-4 border border-[#243355]">
+                      <p className="text-xs font-semibold uppercase tracking-widest text-[#C9A96E] mb-1">
+                        Treatment Approach
+                      </p>
+                      <p className="text-sm text-[#FAFAFA] leading-relaxed">{c.treatment}</p>
+                    </div>
+                  </div>
+                  <div className="md:w-1/2 relative min-h-[260px] md:min-h-[420px]">
+                    <Image
+                      src={c.image}
+                      alt={c.name}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  </div>
                 </div>
               </article>
             ))}
@@ -131,7 +178,7 @@ export default function ThroatVoicePage() {
 
       {/* Throat Surgery Procedures */}
       <section className="py-20 bg-[#0a1220]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-sm font-semibold uppercase tracking-widest text-[#C9A96E] mb-2">
               Surgical Interventions
@@ -145,61 +192,40 @@ export default function ThroatVoicePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Tonsillectomy & Adenoidectomy */}
-            <div className="bg-[#1a2a45] border border-[#243355] rounded-xl p-6 hover:border-[#C9A96E]/40 transition-colors">
-              <h3 className="font-serif text-xl font-bold text-[#FAFAFA] mb-3">Tonsillectomy &amp; Adenoidectomy</h3>
-              <p className="text-sm text-[#94a3b8] leading-relaxed mb-4">
-                Tonsillectomy involves the removal of the tonsils — lymphoid tissues at the back of the throat.
-                It is commonly recommended for patients with recurrent tonsillitis, sleep apnea, or obstructive
-                sleep disorders. Adenoidectomy removes adenoid tissue located behind the nose and is often
-                performed alongside tonsillectomy. Both are among the most frequently performed ENT surgeries,
-                especially in children with chronic inflammation or recurrent infections.
-              </p>
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-widest text-[#C9A96E] mb-2">Key Details</p>
-                <ul className="space-y-1.5">
-                  {[
-                    "Performed under general anaesthesia",
-                    "Procedure typically takes approximately 30 minutes",
-                    "Same-day discharge possible in most cases",
-                    "Highly effective for recurrent tonsillitis and obstructive sleep apnea",
-                  ].map((d) => (
-                    <li key={d} className="flex items-start gap-2 text-sm text-[#FAFAFA]">
-                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#C9A96E] shrink-0" />
-                      {d}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
-            {/* Tracheostomy */}
-            <div className="bg-[#1a2a45] border border-[#243355] rounded-xl p-6 hover:border-[#C9A96E]/40 transition-colors">
-              <h3 className="font-serif text-xl font-bold text-[#FAFAFA] mb-3">Tracheostomy</h3>
-              <p className="text-sm text-[#94a3b8] leading-relaxed mb-4">
-                Tracheostomy creates an alternative airway in the throat for patients experiencing difficulty
-                breathing. A small opening is made in the front of the neck into the trachea (windpipe), through
-                which a tube is placed to allow air to reach the lungs directly. This procedure may be temporary
-                or permanent, depending on the underlying condition requiring intervention.
-              </p>
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-widest text-[#C9A96E] mb-2">Key Details</p>
-                <ul className="space-y-1.5">
-                  {[
-                    "Provides a secure, direct airway when normal breathing is compromised",
-                    "Can be temporary (short-term) or permanent depending on the condition",
-                    "Performed under general anaesthesia in a hospital setting",
-                    "Comprehensive post-operative care and guidance provided",
-                  ].map((d) => (
-                    <li key={d} className="flex items-start gap-2 text-sm text-[#FAFAFA]">
-                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#C9A96E] shrink-0" />
-                      {d}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+          <div className="space-y-8">
+            {surgeries.map((surgery, idx) => (
+              <article
+                key={surgery.name}
+                className="bg-[#1a2a45] border border-[#243355] rounded-2xl overflow-hidden hover:border-[#C9A96E]/40 transition-colors"
+              >
+                <div className={`flex flex-col ${idx % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"}`}>
+                  <div className="md:w-1/2 p-7 md:p-9">
+                    <h3 className="font-serif text-2xl font-bold text-[#FAFAFA] mb-3">{surgery.name}</h3>
+                    <p className="text-sm text-[#94a3b8] leading-relaxed mb-5">{surgery.description}</p>
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-widest text-[#C9A96E] mb-2">Key Details</p>
+                      <ul className="space-y-1.5">
+                        {surgery.details.map((d) => (
+                          <li key={d} className="flex items-start gap-2 text-sm text-[#FAFAFA]">
+                            <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#C9A96E] shrink-0" />
+                            {d}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="md:w-1/2 relative min-h-[260px] md:min-h-[420px]">
+                    <Image
+                      src={surgery.image}
+                      alt={surgery.name}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  </div>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>

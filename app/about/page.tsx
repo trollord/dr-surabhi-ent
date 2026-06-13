@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { GraduationCap, Award, Microscope, Heart, ShieldCheck, Stethoscope, FlaskConical } from "lucide-react";
+import { GraduationCap, Microscope, Heart, ShieldCheck, Stethoscope, FlaskConical, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About Dr. Surabhi Nikam Mirajkar | ENT & Allergy Specialist Mumbai",
@@ -100,21 +100,25 @@ export default function AboutPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0f1a2e]/30 via-transparent to-transparent pointer-events-none" />
               </div>
 
-              <div className="w-full max-w-sm space-y-3">
-                {[
-                  { icon: GraduationCap, text: "MBBS" },
-                  { icon: Stethoscope, text: "MS (ENT)" },
-                  { icon: Award, text: "Certified Allergy Specialist" },
-                  { icon: Microscope, text: "Fellowship — Skull Base Surgery" },
-                ].map(({ icon: Icon, text }) => (
-                  <div
-                    key={text}
-                    className="flex items-center gap-3 px-4 py-3 rounded-xl bg-[#0f1a2e] border border-[#243355]"
-                  >
-                    <Icon size={18} className="text-[#C9A96E] shrink-0" />
-                    <span className="text-sm font-medium text-[#FAFAFA]">{text}</span>
-                  </div>
-                ))}
+              <div className="w-full max-w-sm">
+                <p className="text-sm font-semibold uppercase tracking-widest text-[#C9A96E] mb-3">
+                  You can find me here
+                </p>
+                <div className="space-y-3">
+                  {[
+                    "Dhanvantari Hospital and Research Centre, Dadar (W)",
+                    "Pikale Hospital, Mahim (W)",
+                    "Al Sadique Hospital and Day Care Centre, Md Ali Road",
+                  ].map((text) => (
+                    <div
+                      key={text}
+                      className="flex items-start gap-3 px-4 py-3 rounded-xl bg-[#0f1a2e] border border-[#243355]"
+                    >
+                      <MapPin size={18} className="text-[#C9A96E] shrink-0 mt-0.5" />
+                      <span className="text-sm font-medium text-[#FAFAFA]">{text}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
 
@@ -138,9 +142,9 @@ export default function AboutPage() {
                 </p>
                 <p>
                   She has had the privilege of training under some of the world&apos;s most renowned skull
-                  base surgeons — including <span className="text-[#FAFAFA] font-medium">Dr. Narayan Jayashankar</span>,{" "}
-                  <span className="text-[#FAFAFA] font-medium">Dr. Nishit Shah</span>, and{" "}
-                  <span className="text-[#FAFAFA] font-medium">Dr. Prathamesh Pai</span> — among others.
+                  base surgeons — including Dr. Narayan Jayashankar,{" "}
+                  Dr. Nishit Shah, and{" "}
+                  Dr. Prathamesh Pai — among others.
                   She believes that learning from the best translates directly into offering the best care
                   to every patient who walks through her door.
                 </p>

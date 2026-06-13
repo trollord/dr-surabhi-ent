@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
+import { Wind } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Sinusitis, Nasal Polyps & FESS Surgery Mumbai | Dr. Surabhi Nikam Mirajkar",
@@ -11,6 +13,7 @@ export const metadata: Metadata = {
 const conditions = [
   {
     name: "Sinusitis (Acute & Chronic)",
+    image: "/images/conditions/nose/sinusitis.webp",
     description:
       "Inflammation of the sinuses causing pain, pressure, and congestion. Acute sinusitis lasts up to 4 weeks; chronic sinusitis persists beyond 12 weeks.",
     symptoms: ["Facial pain and pressure", "Nasal congestion", "Thick nasal discharge", "Reduced sense of smell", "Headache"],
@@ -18,6 +21,7 @@ const conditions = [
   },
   {
     name: "Deviated Nasal Septum",
+    image: "/images/conditions/nose/deviated-septum.webp",
     description:
       "A displacement of the cartilage and bone dividing the nostrils, causing one-sided blockage. Very common and often caused by trauma or congenital factors.",
     symptoms: ["One-sided nasal blockage", "Mouth breathing", "Snoring", "Recurrent nosebleeds", "Facial pain"],
@@ -25,6 +29,7 @@ const conditions = [
   },
   {
     name: "Nasal Polyps",
+    image: "/images/conditions/nose/nasal-polyps.webp",
     description:
       "Soft, non-cancerous growths in the nasal lining or sinuses. Often associated with chronic inflammation, allergies, or asthma.",
     symptoms: ["Persistent nasal congestion", "Reduced or lost sense of smell", "Runny nose", "Postnasal drip", "Snoring"],
@@ -32,6 +37,7 @@ const conditions = [
   },
   {
     name: "Allergic Rhinitis",
+    image: "/images/conditions/nose/allergic-rhinitis.webp",
     description:
       "Inflammation of the nasal lining triggered by allergens like dust, pollen, or pet dander. Dr. Surabhi, as a certified Allergy Specialist, offers comprehensive management.",
     symptoms: ["Sneezing", "Clear runny nose", "Nasal itching", "Watery eyes", "Post-nasal drip"],
@@ -39,6 +45,7 @@ const conditions = [
   },
   {
     name: "Nosebleeds (Epistaxis)",
+    image: "/images/conditions/nose/nosebleeds.webp",
     description:
       "Nosebleeds can be anterior (from the front) or posterior (from deeper vessels). Most are benign but recurrent cases need evaluation.",
     symptoms: ["Bleeding from one or both nostrils", "Blood dripping down the throat", "Associated with dryness or trauma"],
@@ -46,10 +53,38 @@ const conditions = [
   },
   {
     name: "FESS — Functional Endoscopic Sinus Surgery",
+    image: "/images/conditions/nose/fess-condition.webp",
     description:
       "A minimally invasive procedure using a nasal endoscope to open blocked sinus drainage pathways, remove polyps, and restore normal sinus function.",
     symptoms: ["Chronic sinusitis not responding to medication", "Nasal polyps", "Recurrent sinus infections"],
     treatment: "Performed under general anesthesia. Most patients go home the same day. Significant improvement in breathing and quality of life.",
+  },
+];
+
+const surgeries = [
+  {
+    name: "Septoplasty",
+    image: "/images/conditions/nose/septoplasty.webp",
+    description:
+      "Septoplasty is the surgical correction of a deviated nasal septum to enable clear breathing and prevent nasal obstruction. This procedure addresses structural abnormalities that interfere with proper airflow through the nasal passages.",
+    details: [
+      "Straightens the cartilage and bone dividing the nostrils",
+      "Minimally invasive — performed entirely inside the nose",
+      "Significant improvement in nasal airflow",
+      "Day procedure — same-day discharge in most cases",
+    ],
+  },
+  {
+    name: "Functional Endoscopic Sinus Surgery (FESS)",
+    image: "/images/conditions/nose/fess-surgery.webp",
+    description:
+      "FESS is a minimally invasive procedure for patients with chronic sinusitis or seriously inflamed, infected, or blocked sinuses. Modern endoscopic techniques provide enhanced visualisation of the sinus passages, allowing surgeons to open blocked areas and improve airflow with minimal tissue disruption. Some procedures utilise balloon sinuplasty, which requires minimal cutting and offers quicker recovery times.",
+    details: [
+      "Endoscopic — no external incisions or cuts",
+      "Removes polyps and opens blocked sinus drainage pathways",
+      "Balloon sinuplasty option for quicker recovery",
+      "Most patients return home the same day",
+    ],
   },
 ];
 
@@ -83,7 +118,7 @@ export default function NoseSinusPage() {
             <span className="mx-2">/</span>
             <span className="text-white">Nose &amp; Sinuses</span>
           </nav>
-          <div className="text-6xl mb-4" aria-hidden="true">👃</div>
+        
           <h1 className="font-serif text-4xl sm:text-5xl font-bold text-white mb-4">
             Nose &amp; Sinuses
           </h1>
@@ -97,38 +132,51 @@ export default function NoseSinusPage() {
 
       {/* Conditions */}
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-serif text-3xl font-bold text-[#FAFAFA]">
               Nasal &amp; Sinus Conditions We Treat
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {conditions.map((c) => (
+          <div className="space-y-8">
+            {conditions.map((c, idx) => (
               <article
                 key={c.name}
-                className="bg-[#1a2a45] border border-[#243355] rounded-xl shadow-sm p-6 card-hover"
+                className="bg-[#1a2a45] border border-[#243355] rounded-2xl overflow-hidden card-hover"
               >
-                <h3 className="font-serif text-xl font-bold text-[#FAFAFA] mb-2">{c.name}</h3>
-                <p className="text-sm text-[#94a3b8] leading-relaxed mb-4">{c.description}</p>
-                <div className="mb-4">
-                  <p className="text-xs font-semibold uppercase tracking-widest text-[#C9A96E] mb-2">
-                    Common Symptoms
-                  </p>
-                  <ul className="space-y-1">
-                    {c.symptoms.map((s) => (
-                      <li key={s} className="flex items-start gap-2 text-sm text-[#FAFAFA]">
-                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#0f1a2e] shrink-0" />
-                        {s}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="bg-[#0f1a2e] rounded-lg p-3">
-                  <p className="text-xs font-semibold uppercase tracking-widest text-[#0f1a2e] mb-1">
-                    Treatment Approach
-                  </p>
-                  <p className="text-sm text-[#FAFAFA]">{c.treatment}</p>
+                <div className={`flex flex-col ${idx % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"}`}>
+                  <div className="md:w-1/2 p-7 md:p-9">
+                    <h3 className="font-serif text-2xl font-bold text-[#FAFAFA] mb-3">{c.name}</h3>
+                    <p className="text-sm text-[#94a3b8] leading-relaxed mb-5">{c.description}</p>
+                    <div className="mb-5">
+                      <p className="text-xs font-semibold uppercase tracking-widest text-[#C9A96E] mb-2">
+                        Common Symptoms
+                      </p>
+                      <ul className="space-y-1.5">
+                        {c.symptoms.map((s) => (
+                          <li key={s} className="flex items-start gap-2 text-sm text-[#FAFAFA]">
+                            <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#C9A96E] shrink-0" />
+                            {s}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className="bg-[#0f1a2e] rounded-lg p-4 border border-[#243355]">
+                      <p className="text-xs font-semibold uppercase tracking-widest text-[#C9A96E] mb-1">
+                        Treatment Approach
+                      </p>
+                      <p className="text-sm text-[#FAFAFA] leading-relaxed">{c.treatment}</p>
+                    </div>
+                  </div>
+                  <div className="md:w-1/2 relative min-h-[260px] md:min-h-[420px]">
+                    <Image
+                      src={c.image}
+                      alt={c.name}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  </div>
                 </div>
               </article>
             ))}
@@ -138,7 +186,7 @@ export default function NoseSinusPage() {
 
       {/* Nose & Sinus Surgery Procedures */}
       <section className="py-20 bg-[#0a1220]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-sm font-semibold uppercase tracking-widest text-[#C9A96E] mb-2">
               Surgical Interventions
@@ -152,60 +200,40 @@ export default function NoseSinusPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Septoplasty */}
-            <div className="bg-[#1a2a45] border border-[#243355] rounded-xl p-6 hover:border-[#C9A96E]/40 transition-colors">
-              <h3 className="font-serif text-xl font-bold text-[#FAFAFA] mb-3">Septoplasty</h3>
-              <p className="text-sm text-[#94a3b8] leading-relaxed mb-4">
-                Septoplasty is the surgical correction of a deviated nasal septum to enable clear breathing and
-                prevent nasal obstruction. This procedure addresses structural abnormalities that interfere with
-                proper airflow through the nasal passages.
-              </p>
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-widest text-[#C9A96E] mb-2">Key Details</p>
-                <ul className="space-y-1.5">
-                  {[
-                    "Straightens the cartilage and bone dividing the nostrils",
-                    "Minimally invasive — performed entirely inside the nose",
-                    "Significant improvement in nasal airflow",
-                    "Day procedure — same-day discharge in most cases",
-                  ].map((d) => (
-                    <li key={d} className="flex items-start gap-2 text-sm text-[#FAFAFA]">
-                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#C9A96E] shrink-0" />
-                      {d}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
-            {/* FESS */}
-            <div className="bg-[#1a2a45] border border-[#243355] rounded-xl p-6 hover:border-[#C9A96E]/40 transition-colors">
-              <h3 className="font-serif text-xl font-bold text-[#FAFAFA] mb-3">Functional Endoscopic Sinus Surgery (FESS)</h3>
-              <p className="text-sm text-[#94a3b8] leading-relaxed mb-4">
-                FESS is a minimally invasive procedure for patients with chronic sinusitis or seriously inflamed,
-                infected, or blocked sinuses. Modern endoscopic techniques provide enhanced visualisation of the
-                sinus passages, allowing surgeons to open blocked areas and improve airflow with minimal tissue
-                disruption. Some procedures utilise balloon sinuplasty, which requires minimal cutting and offers
-                quicker recovery times.
-              </p>
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-widest text-[#C9A96E] mb-2">Key Details</p>
-                <ul className="space-y-1.5">
-                  {[
-                    "Endoscopic — no external incisions or cuts",
-                    "Removes polyps and opens blocked sinus drainage pathways",
-                    "Balloon sinuplasty option for quicker recovery",
-                    "Most patients return home the same day",
-                  ].map((d) => (
-                    <li key={d} className="flex items-start gap-2 text-sm text-[#FAFAFA]">
-                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#C9A96E] shrink-0" />
-                      {d}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+          <div className="space-y-8">
+            {surgeries.map((surgery, idx) => (
+              <article
+                key={surgery.name}
+                className="bg-[#1a2a45] border border-[#243355] rounded-2xl overflow-hidden hover:border-[#C9A96E]/40 transition-colors"
+              >
+                <div className={`flex flex-col ${idx % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"}`}>
+                  <div className="md:w-1/2 p-7 md:p-9">
+                    <h3 className="font-serif text-2xl font-bold text-[#FAFAFA] mb-3">{surgery.name}</h3>
+                    <p className="text-sm text-[#94a3b8] leading-relaxed mb-5">{surgery.description}</p>
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-widest text-[#C9A96E] mb-2">Key Details</p>
+                      <ul className="space-y-1.5">
+                        {surgery.details.map((d) => (
+                          <li key={d} className="flex items-start gap-2 text-sm text-[#FAFAFA]">
+                            <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#C9A96E] shrink-0" />
+                            {d}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="md:w-1/2 relative min-h-[260px] md:min-h-[420px]">
+                    <Image
+                      src={surgery.image}
+                      alt={surgery.name}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  </div>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
